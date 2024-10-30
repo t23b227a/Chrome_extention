@@ -1,5 +1,5 @@
 {
-    "name": "chrome拡張機能",
+    "name": "ADremover",
     "version": "1.0.0",
     "description": "広告を良い感じに消せるようにする",
     "manifest_version": 3,
