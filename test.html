@@ -1,0 +1,1533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- DataLayer -->
+<script>
+    
+    dataLayer = [{
+        
+        'member':'non-member',
+        'splitTest': 'A'
+    }];
+</script>
+<!-- /DataLayer -->
+<!-- Start Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i) {
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCM52W');
+</script>
+<!-- End Google Tag Manager -->
+<script>
+      
+
+// define Monetization Provider
+class CustomMonetizationProvider {
+    async initialize(initializeParams) {
+        return {initializeSuccess: true, apiVersionInUse: "1.0.0", signInMonetizationPortalSupported: false};
+    }
+    async getUserEntitlementState() {
+        return googlefc.monetization.UserEntitlementStateEnum.ENTITLED_NO;
+    }
+    async monetize(monetizeParams) {
+        window.location.href = 'https://uwl.weblio.jp/ps/';
+    }
+    async destroy(destructionParams) {
+        console.log('Custom provider is no longer initialized.');
+    }
+}
+
+// register Monetization Provider
+window.googlefc = window.googlefc || {};
+window.googlefc.monetization = window.googlefc.monetization || {};
+window.googlefc.monetization.providerRegistry = window.googlefc.monetization.providerRegistry || new Map();
+window.googlefc.monetization.providerRegistry.set('publisherCustom', new CustomMonetizationProvider());
+</script>
+
+    <script type="text/javascript">
+        window.pbjs = window.pbjs || {que: []};
+    </script>
+    <script async='async' src="https://flux-cdn.com/client/weblio/weblio-ejje.min.js"></script>
+    <!-- DFP head -->
+    <script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+    <script type="text/javascript">
+        window.googletag = window.googletag || {cmd: []};
+    </script>
+    <!-- /DFP head -->
+
+    <!-- Define callback function -->
+<script type="text/javascript">
+            window.fluxtag = {
+                readyBids: {
+                    prebid: false,
+                    amazon: false,
+                    google: false
+                },
+                failSafeTimeout: 3e3,
+                isFn: function isFn(object) {
+                    var _t = 'Function';
+                    var toString = Object.prototype.toString;
+                    return toString.call(object) === '[object ' + _t + ']';
+                },
+                launchAdServer: function () {
+                    if (!fluxtag.readyBids.prebid || !fluxtag.readyBids.amazon) {
+                        return;
+                    }
+                    fluxtag.requestAdServer();
+                },
+                requestAdServer: function () {
+                    if (!fluxtag.readyBids.google) {
+                        fluxtag.readyBids.google = true;
+                        googletag.cmd.push(function () {
+                            if (!!(pbjs.setTargetingForGPTAsync) && fluxtag.isFn(pbjs.setTargetingForGPTAsync)) {
+                                pbjs.que.push(function () {
+                                    pbjs.setTargetingForGPTAsync();
+                                });
+                            }
+                            googletag.pubads().refresh();
+                        });
+                    }
+                }
+            };
+        </script>
+    <script type="text/javascript">
+    setTimeout(function() {
+        fluxtag.requestAdServer();
+    }, fluxtag.failSafeTimeout);
+</script>
+<!-- /Define callback function -->
+<!-- APS head -->
+    <script type='text/javascript'>
+        !function (a9, a, p, s, t, A, g) {
+            if (a[a9]) return;
+
+            function q(c, r) {
+                a[a9]._Q.push([c, r])
+            }
+
+            a[a9] = {
+                init: function () {
+                    q("i", arguments)
+                }, fetchBids: function () {
+                    q("f", arguments)
+                }, setDisplayBids: function () {
+                }, _Q: []
+            };
+            A = p.createElement(s);
+            A.async = !0;
+            A.src = t;
+            g = p.getElementsByTagName(s)[0];
+            g.parentNode.insertBefore(A, g)
+        }("apstag", window, document, "script", "//c.amazon-adsystem.com/aax2/apstag.js");
+
+        apstag.init({
+            pubID: '3925',
+            adServer: 'googletag',
+            bidTimeout: 1e3
+        });
+
+        apstag.fetchBids({
+            slots: [{
+                    slotID: 'div-gpt-ad-1635315293934-0',
+                    slotName: '/2211331/Weblio_PC_ejje_RightTop_336x280',
+                    sizes: [[320, 100], [300, 250], [336, 280]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635315346842-0',
+                    slotName: '/2211331/Weblio_PC_ejje_RightMiddle_300x600',
+                    sizes: [[300, 600]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635315397001-0',
+                    slotName: '/2211331/Weblio_PC_ejje_RightBottom_300x600',
+                    sizes: [[300, 600]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635316517325-0',
+                    slotName: '/2211331/Weblio_PC_ejje_top_1stLeft_336x280',
+                    sizes: [[336, 280]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635316568023-0',
+                    slotName: '/2211331/Weblio_PC_ejje_top_1stRight_336x280',
+                    sizes: [[336, 280]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635316609637-0',
+                    slotName: '/2211331/Weblio_PC_ejje_top_2ndLeft_336x280',
+                    sizes: [[336, 280]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635316657014-0',
+                    slotName: '/2211331/Weblio_PC_ejje_top_2ndRight_336x280',
+                    sizes: [[336, 280]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635316708891-0',
+                    slotName: '/2211331/Weblio_PC_ejje_top_3rdLeft_336x280',
+                    sizes: [[336, 280]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1635316749236-0',
+                    slotName: '/2211331/Weblio_PC_ejje_top_3rdRight_336x280',
+                    sizes: [[336, 280]]
+                }]
+            }, function (bids) {
+            googletag.cmd.push(function () {
+                apstag.setDisplayBids();
+                // TAM(UAM)を呼び出す
+                fluxtag.readyBids.amazon = true;
+                fluxtag.launchAdServer();
+            });
+        });
+    </script>
+
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_RightTop_336x280', [[320, 100], [300, 250], [336, 280], 'fluid'], 'div-gpt-ad-1635315293934-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_RightMiddle_300x600', [300, 600], 'div-gpt-ad-1635315346842-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_RightBottom_300x600', [300, 600], 'div-gpt-ad-1635315397001-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_Overlay_728x90', [728, 90], 'div-gpt-ad-1635315447702-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_top_1stLeft_336x280', [336, 280], 'div-gpt-ad-1635316517325-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_top_1stRight_336x280', [336, 280], 'div-gpt-ad-1635316568023-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_top_2ndLeft_336x280', [336, 280], 'div-gpt-ad-1635316609637-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_top_2ndRight_336x280', [336, 280], 'div-gpt-ad-1635316657014-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_top_3rdLeft_336x280', [336, 280], 'div-gpt-ad-1635316708891-0').addService(googletag.pubads());
+            googletag.defineSlot('/2211331/Weblio_PC_ejje_top_3rdRight_336x280', [336, 280], 'div-gpt-ad-1635316749236-0').addService(googletag.pubads());
+            googletag.pubads().disableInitialLoad();
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().setTargeting('ejje_page', ['a2']);
+            googletag.enableServices();
+
+            // Prebidが呼び出せる状態の場合
+            if (!!(window.pbFlux) && !!(window.pbFlux.prebidBidder) && fluxtag.isFn(window.pbFlux.prebidBidder)) {
+                pbjs.que.push(function () {
+                    window.pbFlux.prebidBidder();
+                });
+            } else {
+                // Prebidが呼び出せない場合、すぐにGAMを呼び出す
+                fluxtag.readyBids.prebid = true;
+                fluxtag.launchAdServer();
+            }
+        });
+    </script>
+<title>英和辞典・和英辞典 - Weblio辞書</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content="約500万語収録の英和辞典・和英辞典。英語のイディオムや熟語も対応している他、英語の発音を音声でも提供。無料で使える日本最大級のオンライン英語辞書サービス。">
+<meta name="keywords" content="英和辞典,和英辞典,無料オンライン辞書">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+(function($) {
+var weblioAdsByGoogle = window.weblioAdsByGoogle = window.weblioAdsByGoogle || [];
+$(function() {
+  for (var i = 0; i < weblioAdsByGoogle.length; ++i) {
+    (adsbygoogle = window.adsbygoogle || []).push(weblioAdsByGoogle[i]);
+  }
+});
+})(jQuery);
+</script>
+<link rel="manifest" href="https://ejje.weblio.jp/manifest.json">
+<link rel="icon" sizes="144x144" href="https://weblio.hs.llnwd.net/e7/img/favicon/ejje.png">
+<link rel="apple-touch-icon" href="https://weblio.hs.llnwd.net/e7/img/favicon/ejje/safari/apple-touch-icon.png">
+<meta name="msapplication-square70x70logo" content="https://weblio.hs.llnwd.net/e7/img/favicon/ejje/ie/site-tile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://weblio.hs.llnwd.net/e7/img/favicon/ejje/ie/site-tile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://weblio.hs.llnwd.net/e7/img/favicon/ejje/ie/site-tile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://weblio.hs.llnwd.net/e7/img/favicon/ejje/ie/site-tile-310x310.png" />
+<meta name="robots" content="all">
+<meta name="robots" content="noydir">
+<meta name="robots" content="noodp"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://weblio.hs.llnwd.net/e7/css/ejje/index_renew.css?sd=ejje&amp;tst=2024102913">
+<link rel="alternate" type="application/rss+xml" title="ROR" href="https://ejje.weblio.jp/sitemap_ejje_content_index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.weblio.jp/index.rdf">
+<link rel="canonical" href="https://ejje.weblio.jp/">
+<script type="text/javascript" language="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://weblio.hs.llnwd.net/e7/script/index_ejje.js?tst=2024102913" charset="UTF-8"></script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://ejje.weblio.jp/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ejje.weblio.jp/content/{search_term}",
+    "query-input": "required name=search_term"
+  }
+}
+</script>
+</head>
+
+<body>
+<!-- Start Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WCM52W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div ID=headWrp>
+
+<a href="javascript:vaid(0)" id="loginStatus" data-login="false" data-premium="false"></a>
+
+<div ID=headTabWrp>
+<div ID=headTab>
+
+<table ID=logoBar>
+<tr>
+<td ID=logo>
+<div id="logoTxtWrp" class="minimize">
+<a href="https://ejje.weblio.jp/" title="英和辞典・和英辞典 - Weblio辞書">
+<img src="https://weblio.hs.llnwd.net/e7/img/icons/logo.png" alt="英和辞典・和英辞典 - Weblio辞書" class="minimize">
+</a>
+<div class=logoTxt>英和辞典・和英辞典</div>
+</div>
+</td>
+<td>
+<div ID=logoBarTE>
+500万語<br>収録！</div></td>
+<td class=headTabTd>
+<div ID=submenuBoxWrp>
+<table>
+<tr>
+<td onclick="location.href='https://ejje.weblio.jp/'" id=CONTENT class="formBoxENo minimize  formBoxENoSelf">
+<a href="https://ejje.weblio.jp/" title="英和・和英辞典">英和和英辞典</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://ejje.weblio.jp/sentence/'" id=SENTENCE class="formBoxENo minimize ">
+<a href="https://ejje.weblio.jp/sentence/" title="英語例文">英語例文</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://ejje.weblio.jp/english-thesaurus/'" id=ENGLISH_THESAURUS class="formBoxENo minimize ">
+<a href="https://ejje.weblio.jp/english-thesaurus/" title="英語類語">英語類語</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://ejje.weblio.jp/concordance/'" id=CONCORDANCE class="formBoxENo minimize ">
+<a href="https://ejje.weblio.jp/concordance/" title="共起表現">共起表現</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://uwl.weblio.jp/?wpm_source=ejje&amp;wpm_medium=link&amp;wpm_content=gnavi&amp;wpm_campaign=uwl_free'" id=UWL class="formBoxENo minimize ">
+<a href="https://uwl.weblio.jp/?wpm_source=ejje&amp;wpm_medium=link&amp;wpm_content=gnavi&amp;wpm_campaign=uwl_free" title="英単語帳">英単語帳</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://uwl.weblio.jp/vocab-index'" id=UWL_VOCAB class="formBoxENo minimize gtm-glb-vocab_test">
+<a href="https://uwl.weblio.jp/vocab-index" title="英語力診断">英語力診断</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://translate.weblio.jp/'" id=TRANSLATE class="formBoxENo minimize gtm-glb-trns">
+<a href="https://translate.weblio.jp/" title="英語翻訳">英語翻訳</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://eikaiwa.weblio.jp/'" id=WEBLIO_EIKAIWA class="formBoxENo minimize ">
+<a href="https://eikaiwa.weblio.jp/" title="オンライン英会話">オンライン英会話</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://eikaiwa.weblio.jp/ninja-eikaiwa/'" id=NINJA_EIKAIWA class="formBoxENo minimize ">
+<a href="https://eikaiwa.weblio.jp/ninja-eikaiwa/" title="英語コーチングを探す">英語コーチングを探す</a>
+</td>
+<td class=emptyTd></td>
+<td onclick="location.href='https://all-eikaiwa.com/'" id=ALL_EIKAIWA class="formBoxENo minimize ">
+<a href="https://all-eikaiwa.com/" title="英会話教室を探す">英会話教室を探す</a>
+</td>
+<td class=emptyTd></td>
+<td class=emptyTd></td>
+</tr>
+</table>
+</div>
+</td>
+<td class=headMidashiE>
+<h1 title="複数の英和辞典/和英辞典から一気に検索！<br>&nbsp;オンライン英語辞書は「weblio英和和英」">複数の英和辞典/和英辞典から一気に検索！<br>&nbsp;オンライン英語辞書は「weblio英和和英」</h1>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+
+<div ID=headFormWrp>
+<div id=headForm>
+
+<table>
+<tr>
+<td>
+<form action="https://ejje.weblio.jp/content_find" method="get" name="f">
+<table class=formBoxIWrp>
+<tr>
+<td id="headTurboLink"><p id="turbo" status="0"><img src="https://weblio.hs.llnwd.net/e7/img/icons/turbo_off.png" alt="" class="formBoxLEFxFmBtn"></p></td><td class=formBoxInputTd><input maxlength="2048" type="text" name="query" class=formBoxITxt id=searchWord value="" onFocus="erasePlaceholder(this);" onBlur="showPlaceholder(this);"></td>
+<td class=formBoxClearTd><div class=formBoxIClIcnNonWrp><div class="combo_txt_clr formBoxIClIcnNon" onclick="setFormFocus();"></div></div></td>
+<td ID=headFixBxTC><div class=formSelectWrp><select name="searchType" class=formSelect>
+<option value="exact" selected>と一致する</option>
+<option value="prefix">で始まる</option>
+<option value="contains">を含む</option>
+<option value="suffix">で終わる</option>
+<option value="text">を解説文に含む</option>
+</select></div>
+</td>
+<td ID=headFixBxTR>
+<input type="submit" value="項目を検索" class=formButton onclick="erasePlaceholder(document.getElementById('searchWord'));" onmousedown="displayPushedButton(this, 0, 2);" onmouseup="this.setAttribute('style', '');" onmouseover="changeBackgroundColor(this, '#766c66');" onmouseout="this.setAttribute('style', '');">
+</td>
+<td><b ID=komado onclick="return formBoxSmWin('https://ejje.weblio.jp/small/')"><img src="https://weblio.hs.llnwd.net/e7/img/icons/computer.png" alt="" class=formBoxLEFxFmBtn><br>小窓モード</b></td>
+<td onclick="window.open('https://ejje.weblio.jp/lpage/ejje_howto_pc')"><p ID=random>
+<button type="button" class="formBoxRnd"><img src="https://weblio.hs.llnwd.net/e7/img/icons/howto.svg" alt="" class=formBoxLEFxFmBtn><br>使い方</button>
+</p></td>
+</tr>
+</table>
+</form>
+</td>
+<td>
+<div class=headFormBar></div>
+</td>
+<td onclick="window.location='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=top-navi-img&amp;wpm_campaign=ejje-top_prem_top-navi'" class="formBoxRGHT">
+<img src="https://weblio.hs.llnwd.net/e7/img/icons/badge.png" alt=""><br>
+<a href="https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=top-navi-img&amp;wpm_campaign=ejje-top_prem_top-navi" title="プレミアム">プレミアム</a>
+</td>
+<td onclick="setFormFocus();ht(this, 'https://uwl.weblio.jp/accounts/login-entry?done=https%3A%2F%2Fejje.weblio.jp%2F&amp;wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=prem-globalnavi_login&amp;wpm_campaign=ejje_top_globalnavi_login');" class="formBoxRGHT">
+<img src="https://weblio.hs.llnwd.net/e7/img/icons/login.png" alt=""><br>
+<a onclick="setFormFocus();return cu(this, 'https://uwl.weblio.jp/accounts/login-entry?done=https%3A%2F%2Fejje.weblio.jp%2F&amp;wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=prem-globalnavi_login&amp;wpm_campaign=ejje_top_globalnavi_login');" href="https://uwl.weblio.jp/accounts/login-entry?done=https%3A%2F%2Fejje.weblio.jp%2F&amp;wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=prem-globalnavi_login&amp;wpm_campaign=ejje_top_globalnavi_login" title="ログイン">ログイン</a>
+</td>
+<td onclick="popUpLoginWindow('https://ejje.weblio.jp/dict-order-setting');" class="formBoxRGHT">
+<img src="https://weblio.hs.llnwd.net/e7/img/icons/gear-arrow.png" alt="設定" title="設定">
+<p class=configBottom>設定</p>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript"><!--
+$(document).ready(function(){
+
+});
+
+//--></script>
+<div ID=indexWrp>
+
+<div ID=indexBodyWrp>
+<div ID=indexBody>
+<div ID=headBoxCmk>
+<b>急上昇ワード：</b>
+
+<a href="https://ejje.weblio.jp/content/Case?erl=true" title="Case" class="burstWord" rel="nofollow">Case</a>
+&nbsp;&nbsp;
+<a href="https://ejje.weblio.jp/content/stand+up+for?erl=true" title="stand up for" class="burstWord" rel="nofollow">stand up for</a>
+&nbsp;&nbsp;
+<a href="https://ejje.weblio.jp/content/useful?erl=true" title="useful" class="burstWord" rel="nofollow">useful</a>
+&nbsp;&nbsp;
+<a href="https://ejje.weblio.jp/content/halloween?erl=true" title="halloween" class="burstWord" rel="nofollow">halloween</a>
+&nbsp;&nbsp;
+<a href="https://ejje.weblio.jp/content/property?erl=true" title="property" class="burstWord" rel="nofollow">property</a>
+<div class="fb-like" data-href="https://www.facebook.com/weblio/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" style="padding-left:70px; vertical-align:middle;"></div>
+</div>
+<div ID=main>
+
+<div class=mainBlock>
+<h2>Weblioの英語サービス</h2>
+<table class="weblioServices weblioEnglishServices">
+<tr>
+<td><div><a href="https://translate.weblio.jp" title="英語翻訳"><span>英語翻訳</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/translation.png" class="panelSpacer" width="70" height="70" alt="英語翻訳アイコン"></a></div></td>
+<td><div><a href="https://uwl.weblio.jp/vocab-index" title="英語力診断"><span>語彙力診断</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/checkmark.png" class="panelSpacer" width="70" height="70" alt="語彙力診断アイコン"></a></div></td>
+<td><div><a href="https://ejje.weblio.jp/reading/story-learning/" title="読んで学ぶ英語" target="_blank"><img src="https://weblio.hs.llnwd.net/e7/img/icons/new.gif" style="margin-left: -15px; padding-top: 0;" alt="">&nbsp;<span>読んで<br>学ぶ英語</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/icon_book.png" alt="読んで学ぶ英語アイコン"></a></div></td>
+<td><div><a href="https://uwl.weblio.jp" title="英単語帳"><span>英単語帳</span><br><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/card.svg" width="80" alt="英単語帳アイコン"></a></div></td>
+<td><div><a href="https://eikaiwa.weblio.jp/" title="オンライン英会話"><span>オンライン<br>英会話</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/headset.png" width="70" height="70" alt="オンライン英会話アイコン"></a></div></td>
+</tr>
+<tr>
+<td><div id="wsSchoolEikaiwa"><a href="https://eikaiwa.weblio.jp/school/?utm_source=ejje_top&amp;utm_medium=panel&amp;utm_content=ceikaiwa_top-ejje_top-panel&amp;utm_campaign=ceikaiwa-top" title="学校向け英会話トップページ"><span>学校向け英会話</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/school_eikaiwa_icon.png" width="70" height="70" alt="学校向け英会話アイコン"></a></div></td>
+<td><div><a href="https://eikaiwa.weblio.jp/ninja-eikaiwa/?utm_source=ejje&amp;utm_medium=banner&amp;utm_campaign=ejje-top-pc" title="忍者英会話"><span>忍者英会話</span><br><img class="panelSpacer" src="https://weblio.hs.llnwd.net/e7/img/icons/ninja-brown.png" width="70" alt="忍者英会話アイコン" class="desk-icon"></a></div></td>
+<td><div><a href="https://ejje.weblio.jp/lpage/sapiens-eigobuffet?utm_source=ejje&amp;utm_medium=banner&amp;utm_campaign=ejje-top-pc" title="TOEIC練習問題トップページ"><span>TOEIC練習問題</span><br><img class="panelSpacer" src="https://weblio.hs.llnwd.net/e7/img/icons/HandShake.png" width="70" alt="TOEIC練習問題アイコン"></a></div></td>
+<td><div id="wsEikaiwaMiraiJunior"><a href="https://eikaiwa.weblio.jp/mirai-junior/?utm_source=ejje_top&amp;utm_medium=panel&amp;utm_content=mirai_top-ejje_top-panel&amp;utm_campaign=mirai-top" title="障がい福祉サービス子ども英会話"><span>障がい福祉サービス<br>子ども英会話</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/mirai-junior.svg" class="panelSpacer" width="100" alt="障がい福祉サービス子ども英会話アイコン"></a></div></td>
+<td><div id="wsEikaiwaHoujin"><a href="https://eikaiwa.weblio.jp/business/?utm_source=ejje_top&amp;utm_medium=panel&amp;utm_content=beikaiwa_top-ejje_top-panel&amp;utm_campaign=beikaiwa-top" title="Weblio法人向け英会話トップページ"><span>企業向け英会話</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/beikaiwa.svg" class="panelSpacer" width="60" alt="Weblio法人向け英会話アイコン"></a></div></td>
+</tr>
+</table>
+</div>
+
+<div class="mainBlock flex-rectangle-ads-frame">
+    <div id='ejjeIndexAdBnrId-0-0'></div>
+    <div id='ejjeIndexAdBnrId-0-1'></div>
+    </div>
+<div class="mainBlock prmmSrvc" onclick="window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=background&amp;wpm_campaign=ejje-top_prem_center_background'">
+<img src="https://weblio.hs.llnwd.net/e7/img/icons/circle.png" alt="" onclick="event.stopPropagation();window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=red-badge&amp;wpm_campaign=ejje-top_prem_center_red-badge'" style="bottom:35px;float:left;position:relative;right:10px;z-index:1">
+<span onclick="event.stopPropagation();window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=red-badge&amp;wpm_campaign=ejje-top_prem_center_red-badge'" style="bottom:19px;color:#fff;float:left;font-size:13px;font-weight:bold;line-height:16px;position:relative;right:64px;text-align:center;z-index:1">
+60日間<br>&nbsp;無料！
+</span>
+<h2 style="bottom:5px;position:relative;right:45px;">
+<a href="https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=title&amp;wpm_campaign=ejje-top_prem_center_title" title="">
+Weblioプレミアムサービス
+</a>
+</h2>
+<table class=services style="clear:both;position:relative;bottom:15px;">
+<tr>
+<td><a href="https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=no-ad-word&amp;wpm_campaign=ejje-top_prem_center_no-ad-word" title="">広告非表示</a></td>
+<td><a href="https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=20000-word&amp;wpm_campaign=ejje-top_prem_center_shiborikomi-word" title="">例文絞込み</a></td>
+<td><a href="https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=shindan-word&amp;wpm_campaign=ejje-top_prem_center_20000-word" title="">登録単語数<br>20000語</a></td>
+<td><a href="https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=no-dict-word&amp;wpm_campaign=ejje-top_prem_center_shindan-word" title="">診断テスト<br>無制限</a></td>
+<td><a href="https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=no-dict-word&amp;wpm_campaign=ejje-top_prem_center_no-dict-word" title="">辞書非表示</a></td>
+</tr>
+<tr>
+<td><img src="https://weblio.hs.llnwd.net/e7/img/icons/ads.png" alt="" onmouseover="changeBackgroundColor(this, '#fefefe');" onmouseout="this.setAttribute('style', '');" onclick="event.stopPropagation();window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=no-ad-img&amp;wpm_campaign=ejje-top_prem_center_no-ad-img'"></td>
+<td><img src="https://weblio.hs.llnwd.net/e7/img/icons/funnel.png" alt="" onmouseover="changeBackgroundColor(this, '#fefefe');" onmouseout="this.setAttribute('style', '');" onclick="event.stopPropagation();window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=20000-img&amp;wpm_campaign=ejje-top_prem_center_shiborikomi-img'"></td>
+<td><img src="https://weblio.hs.llnwd.net/e7/img/icons/plus.png" alt="" onmouseover="changeBackgroundColor(this, '#fefefe');" onmouseout="this.setAttribute('style', '');" onclick="event.stopPropagation();window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=shindan-img&amp;wpm_campaign=ejje-top_prem_center_20000-img'"></td>
+<td><img src="https://weblio.hs.llnwd.net/e7/img/icons/loop.png" alt="" onmouseover="changeBackgroundColor(this, '#fefefe');" onmouseout="this.setAttribute('style', '');" onclick="event.stopPropagation();window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=no-dict-img&amp;wpm_campaign=ejje-top_prem_center_shindan-img'"></td>
+<td><img src="https://weblio.hs.llnwd.net/e7/img/icons/cancel.png" alt="" onmouseover="changeBackgroundColor(this, '#fefefe');" onmouseout="this.setAttribute('style', '');" onclick="event.stopPropagation();window.location.href='https://uwl.weblio.jp/ps/index?wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=no-dict-img&amp;wpm_campaign=ejje-top_prem_center_no-dict-img'"></td>
+</tr>
+</table>
+</div>
+<div class=mainBlock>
+    <form method="post" action="https://translate.weblio.jp/" name="translate">
+<div ID=trnsBxWRP>
+<div ID=trnsBxH>
+<div ID=trnsBxHCnt>
+<table ID=trnsBxHT>
+<tr>
+<td ID=trnsBxHTL>
+<h2><img src="https://weblio.hs.llnwd.net/e7/img/icons/translation_mini.png" alt="" class=icon><a href="https://translate.weblio.jp/" title="英語翻訳" target="_blank">英語翻訳</a></h2>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div ID=trnsBxB>
+<div ID=trnsBxBCnt>
+<textarea name="originalText" cols="76" rows="10" ID="originalTextArea" class=trnsBxTx></textarea>
+</div>
+</div>
+<div ID=trnsBtnWrp>
+<input type="submit" id=trnsBtn class=commonBtn value="翻訳する" onmousedown="displayPushedButton(this, 0, 2);" onmouseup="this.setAttribute('style', '');" onmouseover="changeBackgroundColor(this, '#faa044');" onmouseout="this.setAttribute('style', '');">
+<input type="hidden" name="lp" value="EJ" checked>
+</div>
+</div>
+</form>
+<script type="text/javascript">
+$(document).ready(function(){
+    var transDispMsg = 'ここに翻訳したい文章を入力して下さい';
+    $('#originalTextArea').show(function(){
+        if ($(this).val() == transDispMsg || $(this).val() == '') {
+            $(this).css({color:'#ccc'}).val(transDispMsg);
+        }
+    }).focus(function(){
+        if ($(this).val() == transDispMsg) {
+            $(this).css({color:'black'}).val('');
+        }
+    }).blur(function(){
+        if ($(this).val() == '') {
+            $(this).css({color:'#ccc'}).val(transDispMsg);
+        }
+    });
+    $('#trnsBtn').click(function() {
+        var trnsTxt = $('#originalTextArea');
+        if (trnsTxt.val() == transDispMsg) {
+        	trnsTxt.val('');
+        }
+    });
+});
+</script>
+</div>
+<div class="mainBlock flex-rectangle-ads-frame">
+    <div id='ejjeIndexAdBnrId-1-0'></div>
+    <div id='ejjeIndexAdBnrId-1-1'></div>
+    </div>
+<div class=mainBlock>
+<img src="https://weblio.hs.llnwd.net/e7/img/icons/ribbon.png" alt="" id="pickupColumnRibbon">
+<span id="pickupColumnTitle">ビジネス英語コラム</span>
+<span class="pickupColumnRightTopLink"><a href="https://eikaiwa.weblio.jp/business/information/" title="英会話法人コラム">英会話法人コラム</a></span>
+<span style="clear:both"></span>
+<div class=eikaiwaBusinessColumnRecentArea>
+    <div class=eikaiwaBusinessColumnEnableArea></div>
+    <div class=eikaiwaBusinessColumnDisableArea>
+        <div class=eikaiwaBusinessColumnRecentContent id=eikaiwa-business-column-recent-post-default-1>
+            <a href="https://eikaiwa.weblio.jp/business/information/inbound/2017s-foreign-tourists" title=""></a>
+            <p class=title>【大予想】来年2017年の外国人観光客数は2,880万人？</p>
+            <img src="https://weblio.hs.llnwd.net/e7/img/eikaiwa_business_recent_default1.jpg" alt="">
+            <p class=summary>日本政府観光局（JNTO）によれば、2016年の訪日外国人観光客数は、2016年10月の時点で2,000万人を突破しました。外国人観光客数は2013年まで1,000万人にも満たない数でしたが、2013年に初めて1,000万人を突破し、わずか3年で倍増するまでに至りました。<span>続きを読む</span></p>
+        </div>
+        <div class=eikaiwaBusinessColumnRecentContent id=eikaiwa-Business-column-recent-post-default-2>
+            <a href="https://eikaiwa.weblio.jp/business/information/education/english-skill-primary-teacher" title=""></a>
+            <p class=title>小学校教員の英語力の実態、想像以上に英語ができない？</p>
+            <img src="https://weblio.hs.llnwd.net/e7/img/eikaiwa_business_recent_default2.jpg" alt="">
+            <p class=summary>今は小学生でも英語教育が行われています。2008年度から開始され、2011年度には小学5年生以上は英語が必修に、2020年度からは教科としての英語の授業が開始と、段階的に小学校の英語授業導入が推進されています。入試科目に英語を取り入れている私立中学校も出てきました。<span>続きを読む</span></p>
+        </div>
+    </div>
+    <span style="clear:both"></span>
+    <script type="text/javascript">EikaiwaColumnInterface.getRecentBusinessContents()</script>
+</div>
+</div>
+
+<div class="mainBlock flex-rectangle-ads-frame">
+    <div id='ejjeIndexAdBnrId-2-0'></div>
+    <div id='ejjeIndexAdBnrId-2-1'></div>
+    </div>
+<div class=mainBlock>
+<h2>Weblioのサービス</h2>
+<table class="weblioServices">
+<tr>
+<td><div id="wsChatRobot"><a href="https://chat-robot.weblio.jp/?utm_source=ejje_top&amp;utm_medium=panel&amp;utm_content=nanna_top-ejje_top-panel&amp;utm_campaign=nanna_top" title="AI英会話ナンナトップページ"><span>AI英会話<br>ナンナ</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/head32.png" width="80" height="75" alt="AI英会話ナンナアイコン"></a></div></td>
+<td><div id="wsEikaiwaColumn"><a href="https://eikaiwa.weblio.jp/column/?utm_source=ejje_top&amp;utm_medium=panel&amp;utm_content=eikaiwa_column_top-ejje_top-panel&amp;utm_campaign=eikawia-column" title="Weblio英会話コラムトップページ"><span>英会話コラム</span><br><img src="https://weblio.hs.llnwd.net/e7/img/icons/eikaiwa_column_icon.png" class="panelSpacer" width="80" height="80" alt="Weblio英会話コラムアイコン"></a></div></td>
+</tr>
+</table>
+</div>
+
+<div class="mainBlock gkshuSudan">
+<h2><a href="https://qa.weblio.jp/"><img src="https://weblio.hs.llnwd.net/e7/img/icons/bubble.png" alt="" class=icon>英語の質問箱</a></h2>
+<ul class=gssdsTopRes><li><img src="https://weblio.hs.llnwd.net/e7/img/icons/arrow_yoko.png" alt=""><a href="https://qa.weblio.jp/%E5%A5%BD%E3%81%8D%E3%81%AA%E8%8B%B1%E8%AA%9E%E3%81%AE%E5%90%8D%E8%A8%80%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-50" title="英語の質問箱">好きな英語の名言はありますか？ (448)</a></li><li><img src="https://weblio.hs.llnwd.net/e7/img/icons/arrow_yoko.png" alt=""><a href="https://qa.weblio.jp/%E8%8B%B1%E8%AA%9E%E3%82%92%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%91%E3%82%8B%E6%84%8F%E5%91%B3%E3%81%A8%E3%81%AF-21" title="英語の質問箱">英語を身につける意味とは？ (172)</a></li><li><img src="https://weblio.hs.llnwd.net/e7/img/icons/arrow_yoko.png" alt=""><a href="https://qa.weblio.jp/%E6%B5%B7%E5%A4%96%E3%81%AE%E4%BA%BA%E3%81%AB%E5%96%9C%E3%81%B0%E3%82%8C%E3%82%8B%E3%81%8A%E3%81%BF%E3%82%84%E3%81%92%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-49" title="英語の質問箱">海外の人に喜ばれるおみやげはありますか？ (147)</a></li><li><img src="https://weblio.hs.llnwd.net/e7/img/icons/arrow_yoko.png" alt=""><a href="https://qa.weblio.jp/%E3%83%AC%E3%83%99%E3%83%AB30%E3%81%8C%E7%B0%A1%E5%8D%98%E3%81%99%E3%81%8E%E3%81%BE%E3%81%99%E3%83%AC%E3%83%99%E3%83%AB%E3%82%92%E5%A2%97%E3%82%84%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84-70" title="英語の質問箱">レベル30が簡単すぎます。レベルを増やしてください。 (122)</a></li><li><img src="https://weblio.hs.llnwd.net/e7/img/icons/arrow_yoko.png" alt=""><a href="https://qa.weblio.jp/%E8%8B%B1%E6%A4%9C5%E7%B4%9A%E3%81%AB%E8%90%BD%E3%81%A1%E3%81%BE%E3%81%97%E3%81%9F-74" title="英語の質問箱">英検５級に落ちました… (109)</a></li><li><img src="https://weblio.hs.llnwd.net/e7/img/icons/arrow_yoko.png" alt=""><a href="https://qa.weblio.jp/%E8%8B%B1%E6%A4%9C4%E7%B4%9A%E9%9B%A3%E3%81%97%E3%81%84%E6%B3%A3-26" title="英語の質問箱">英検4級難しい…(泣) (104)</a></li><li><img src="https://weblio.hs.llnwd.net/e7/img/icons/arrow_yoko.png" alt=""><a href="https://qa.weblio.jp/%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88%E3%80%8C%E7%9A%86%E3%81%95%E3%82%93%E3%81%84%E3%81%A4%E3%82%82%E3%82%82%E3%81%A9%E3%81%93%E3%81%A7%E8%8B%B1%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7%E3%81%97%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B%E3%80%8D-1" title="英語の質問箱">アンケート「皆さんいつももどこで英語の勉強してますか？」 (95)</a></li></ul></div><div class=mainBlock style="height:190px;padding-bottom:0;">
+<h2><img src="https://weblio.hs.llnwd.net/e7/img/icons/stopwatch.png" alt="" class=icon>とっさの英語表現</h2>
+<table>
+<tr>
+<td>
+</td>
+<td style="vertical-align:top;">
+<h3 style="margin-top:0;">「とっさの英語表現」をメールで購読</h3>
+<form method="POST" action="https://accounts.weblio.jp/uwl/register/register-confirm-anonymous">
+<div id="subscribeMailWrp"><input type="text" name="email" ID="subscribeMail"><div class="subscribeMailMsg">(メールアドレスを入力する)</div></div>
+<input type="hidden" name="postkey" value="6db3fe70e452daf15b727f2a6232b257">
+<input type="hidden" name="done" value="https://ejje.weblio.jp/">
+<input type="submit" name="subscribeMailSubmit" class="sbscrbBtn commonBtn" value="無料で購読する!" onmousedown="displayPushedButton(this, 0, 2);" onmouseup="this.setAttribute('style', '');" onmouseover="changeBackgroundColor(this, '#72be8c');" onmouseout="this.setAttribute('style', '');">
+</form>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="mainBlock tmplteRanking"><h2><a href="https://ejje.weblio.jp/template/OETMS"><img src="https://weblio.hs.llnwd.net/e7/img/icons/magnifyingtext_mini.png" alt="" class=icon>英文メールテンプレートランキング</a></h2><table class=mailRanking><tr><td class=mailRank><div class=mailRankBox>1</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E7%A2%BA%E8%AA%8D%E3%83%BB%E5%A4%89%E6%9B%B4" title="">アポイントメントの確認・変更メール</a></td><td class=mailRank><div class=mailRankBox>2</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E6%A5%AD%E5%8B%99%E9%80%A3%E7%B5%A1/%E3%82%A2%E3%83%89%E3%83%90%E3%82%A4%E3%82%B9%E3%81%B8%E3%81%AE%E3%81%8A%E7%A4%BC" title="">アドバイスへのお礼メール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>3</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E6%A5%AD%E5%8B%99%E9%80%A3%E7%B5%A1/%E4%BB%95%E4%BA%8B%E3%81%AE%E4%BE%9D%E9%A0%BC" title="">仕事の依頼メール</a></td><td class=mailRank><div class=mailRankBox>4</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF" title="">アポイントメントの申し込みメール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>5</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E9%80%A3%E7%B5%A1%E5%85%88%E3%83%BB%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%A4%89%E6%9B%B4%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="">連絡先・メールアドレス変更のお知らせメール</a></td><td class=mailRank><div class=mailRankBox>6</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E6%B1%82%E4%BA%BA%E3%83%BB%E6%B1%82%E8%81%B7/%E4%B8%8D%E6%8E%A1%E7%94%A8%E3%81%AE%E9%80%9A%E7%9F%A5" title="">不採用の通知メール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>7</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF%E3%81%B8%E3%81%AE%E8%BF%94%E4%BF%A1%EF%BC%88%E9%9D%A2%E4%BC%9A%E3%81%AB%E5%BF%9C%E3%81%98%E3%82%8B%EF%BC%89" title="">アポイントメントの申し込みへの返信（面会に応じる）メール</a></td><td class=mailRank><div class=mailRankBox>8</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E6%97%A5%E7%A8%8B%E3%81%AE%E5%A4%89%E6%9B%B4%E3%81%B8%E3%81%AE%E3%81%8A%E7%A4%BC" title="">アポイント日程の変更へのお礼メール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>9</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E3%83%A1%E3%83%BC%E3%83%AB%E5%8F%97%E9%A0%98%E9%80%9A%E7%9F%A5" title="">メール受領通知メール</a></td><td class=mailRank><div class=mailRankBox>10</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E4%BC%9A%E8%AD%B0/%E4%BC%9A%E8%AD%B0%E3%81%AE%E4%BA%88%E5%AE%9A%E5%A4%89%E6%9B%B4%E3%81%AE%E9%80%9A%E7%9F%A5" title="">会議の予定変更の通知メール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>11</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E5%A5%91%E7%B4%84/%E5%A5%91%E7%B4%84%E6%9B%B8%E3%81%AE%E9%80%81%E4%BB%98" title="">契約書の送付メール</a></td><td class=mailRank><div class=mailRankBox>12</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E6%B3%A8%E6%96%87/%E5%95%86%E5%93%81%E7%99%BA%E9%80%81%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="">商品発送のお知らせメール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>13</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88/%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AB%E9%A1%98%E3%81%84" title="">アポイントメントのキャンセル願いメール</a></td><td class=mailRank><div class=mailRankBox>14</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E8%AB%8B%E6%B1%82%E3%83%BB%E6%94%AF%E6%89%95%E3%81%84/%E4%BB%A3%E9%87%91%E3%81%AE%E8%AB%8B%E6%B1%82" title="">代金の請求メール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>15</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E6%A5%AD%E5%8B%99%E9%80%A3%E7%B5%A1/%E3%82%A2%E3%83%89%E3%83%90%E3%82%A4%E3%82%B9%E3%82%92%E6%B1%82%E3%82%81%E3%82%8B" title="">アドバイスを求めるメール</a></td><td class=mailRank><div class=mailRankBox>16</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E5%A5%91%E7%B4%84/%E5%8F%96%E5%BC%95%E6%88%90%E7%AB%8B%E3%81%AE%E3%81%8A%E7%A4%BC" title="">取引成立のお礼メール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>17</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E6%85%B6%E5%BC%94%E3%83%BB%E6%8C%A8%E6%8B%B6/%E3%81%8A%E6%82%94%E3%81%BF" title="">お悔みメール</a></td><td class=mailRank><div class=mailRankBox>18</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E6%A5%AD%E5%8B%99%E9%80%A3%E7%B5%A1/%E4%BB%95%E4%BA%8B%E3%81%AE%E4%BE%9D%E9%A0%BC%E3%81%B8%E3%81%AE%E8%BF%94%E4%BF%A1%EF%BC%88%E4%BE%9D%E9%A0%BC%E3%81%AB%E5%BF%9C%E3%81%98%E3%82%8B%EF%BC%89" title="">仕事の依頼への返信（依頼に応じる）メール</a></td></tr><tr><td class=mailRank><div class=mailRankBox>19</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E8%AB%8B%E6%B1%82%E3%83%BB%E6%94%AF%E6%89%95%E3%81%84/%E4%BB%A3%E9%87%91%E6%94%AF%E6%89%95%E3%81%84%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9F%A5%E3%82%89%E3%81%9B%E3%82%8B" title="">代金支払いについて知らせるメール</a></td><td class=mailRank><div class=mailRankBox>20</div></td><td class=mailTitle><a href="https://ejje.weblio.jp/template/OETMS/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E6%99%82%E5%81%9C%E6%AD%A2%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="">ウェブサイトリニューアル・サービス一時停止のお知らせメール</a></td></tr></table></div><div class=mainBlock>
+<h2><img src="https://weblio.hs.llnwd.net/e7/img/icons/folder.png" alt="" class=icon>索引</h2>
+<div class=treeBoxC>
+<h3 class=enclosedMenu id=indexNaviWordListRenewTitle>50音・アルファベット索引</h3>
+<div id=indexNaviWordListRenewBody class=enclosedMenuBody>
+<table>
+<tbody>
+<tr>
+    <td>
+    <p>
+    <a href="https://ejje.weblio.jp/category/aa">あ</a><a href="https://ejje.weblio.jp/category/ii">い</a><a href="https://ejje.weblio.jp/category/uu">う</a><a href="https://ejje.weblio.jp/category/ee">え</a><a href="https://ejje.weblio.jp/category/oo">お</a><br>
+    <a href="https://ejje.weblio.jp/category/ka">か</a><a href="https://ejje.weblio.jp/category/ki">き</a><a href="https://ejje.weblio.jp/category/ku">く</a><a href="https://ejje.weblio.jp/category/ke">け</a><a href="https://ejje.weblio.jp/category/ko">こ</a><br>
+    <a href="https://ejje.weblio.jp/category/sa">さ</a><a href="https://ejje.weblio.jp/category/shi">し</a><a href="https://ejje.weblio.jp/category/su">す</a><a href="https://ejje.weblio.jp/category/se">せ</a><a href="https://ejje.weblio.jp/category/so">そ</a><br>
+    <a href="https://ejje.weblio.jp/category/ta">た</a><a href="https://ejje.weblio.jp/category/chi">ち</a><a href="https://ejje.weblio.jp/category/tsu">つ</a><a href="https://ejje.weblio.jp/category/te">て</a><a href="https://ejje.weblio.jp/category/to">と</a><br>
+    <a href="https://ejje.weblio.jp/category/na">な</a><a href="https://ejje.weblio.jp/category/ni">に</a><a href="https://ejje.weblio.jp/category/nu">ぬ</a><a href="https://ejje.weblio.jp/category/ne">ね</a><a href="https://ejje.weblio.jp/category/no">の</a><br>
+    <a href="https://ejje.weblio.jp/category/ha">は</a><a href="https://ejje.weblio.jp/category/hi">ひ</a><a href="https://ejje.weblio.jp/category/fu">ふ</a><a href="https://ejje.weblio.jp/category/he">へ</a><a href="https://ejje.weblio.jp/category/ho">ほ</a><br>
+    <a href="https://ejje.weblio.jp/category/ma">ま</a><a href="https://ejje.weblio.jp/category/mi">み</a><a href="https://ejje.weblio.jp/category/mu">む</a><a href="https://ejje.weblio.jp/category/me">め</a><a href="https://ejje.weblio.jp/category/mo">も</a><br>
+    <a href="https://ejje.weblio.jp/category/ya">や</a><a href="https://ejje.weblio.jp/category/yu">ゆ</a><a href="https://ejje.weblio.jp/category/yo">よ</a><br>
+    <a href="https://ejje.weblio.jp/category/ra">ら</a><a href="https://ejje.weblio.jp/category/ri">り</a><a href="https://ejje.weblio.jp/category/ru">る</a><a href="https://ejje.weblio.jp/category/re">れ</a><a href="https://ejje.weblio.jp/category/ro">ろ</a><br>
+    <a href="https://ejje.weblio.jp/category/wa">わ</a><a href="https://ejje.weblio.jp/category/wo">を</a><a href="https://ejje.weblio.jp/category/nn">ん</a></p>
+    </td>
+    
+    <td>
+    <p>
+    <a href="https://ejje.weblio.jp/category/ga">が</a><a href="https://ejje.weblio.jp/category/gi">ぎ</a><a href="https://ejje.weblio.jp/category/gu">ぐ</a><a href="https://ejje.weblio.jp/category/ge">げ</a><a href="https://ejje.weblio.jp/category/go">ご</a><br>
+    <a href="https://ejje.weblio.jp/category/za">ざ</a><a href="https://ejje.weblio.jp/category/zi">じ</a><a href="https://ejje.weblio.jp/category/zu">ず</a><a href="https://ejje.weblio.jp/category/ze">ぜ</a><a href="https://ejje.weblio.jp/category/zo">ぞ</a><br>
+    <a href="https://ejje.weblio.jp/category/da">だ</a><a href="https://ejje.weblio.jp/category/di">ぢ</a><a href="https://ejje.weblio.jp/category/du">づ</a><a href="https://ejje.weblio.jp/category/de">で</a><a href="https://ejje.weblio.jp/category/do">ど</a><br>
+    <a href="https://ejje.weblio.jp/category/ba">ば</a><a href="https://ejje.weblio.jp/category/bi">び</a><a href="https://ejje.weblio.jp/category/bu">ぶ</a><a href="https://ejje.weblio.jp/category/be">べ</a><a href="https://ejje.weblio.jp/category/bo">ぼ</a><br>
+    <a href="https://ejje.weblio.jp/category/pa">ぱ</a><a href="https://ejje.weblio.jp/category/pi">ぴ</a><a href="https://ejje.weblio.jp/category/pu">ぷ</a><a href="https://ejje.weblio.jp/category/pe">ぺ</a><a href="https://ejje.weblio.jp/category/po">ぽ</a></p>
+    </td>
+    
+    <td>
+    <p>
+    <a href="https://ejje.weblio.jp/category/a">Ａ</a><a href="https://ejje.weblio.jp/category/b">Ｂ</a><a href="https://ejje.weblio.jp/category/c">Ｃ</a><a href="https://ejje.weblio.jp/category/d">Ｄ</a><a href="https://ejje.weblio.jp/category/e">Ｅ</a><br>
+    <a href="https://ejje.weblio.jp/category/f">Ｆ</a><a href="https://ejje.weblio.jp/category/g">Ｇ</a><a href="https://ejje.weblio.jp/category/h">Ｈ</a><a href="https://ejje.weblio.jp/category/i">Ｉ</a><a href="https://ejje.weblio.jp/category/j">Ｊ</a><br>
+    <a href="https://ejje.weblio.jp/category/k">Ｋ</a><a href="https://ejje.weblio.jp/category/l">Ｌ</a><a href="https://ejje.weblio.jp/category/m">Ｍ</a><a href="https://ejje.weblio.jp/category/n">Ｎ</a><a href="https://ejje.weblio.jp/category/o">Ｏ</a><br>
+    <a href="https://ejje.weblio.jp/category/p">Ｐ</a><a href="https://ejje.weblio.jp/category/q">Ｑ</a><a href="https://ejje.weblio.jp/category/r">Ｒ</a><a href="https://ejje.weblio.jp/category/s">Ｓ</a><a href="https://ejje.weblio.jp/category/t">Ｔ</a><br>
+    <a href="https://ejje.weblio.jp/category/u">Ｕ</a><a href="https://ejje.weblio.jp/category/v">Ｖ</a><a href="https://ejje.weblio.jp/category/w">Ｗ</a><a href="https://ejje.weblio.jp/category/x">Ｘ</a><a href="https://ejje.weblio.jp/category/y">Ｙ</a><br>
+    <a href="https://ejje.weblio.jp/category/z">Ｚ</a></p>
+    </td>
+    
+    <td>
+    <p>
+    <a href="https://ejje.weblio.jp/category/1">１</a><a href="https://ejje.weblio.jp/category/2">２</a><a href="https://ejje.weblio.jp/category/3">３</a><a href="https://ejje.weblio.jp/category/4">４</a><a href="https://ejje.weblio.jp/category/5">５</a><br>
+    <a href="https://ejje.weblio.jp/category/6">６</a><a href="https://ejje.weblio.jp/category/7">７</a><a href="https://ejje.weblio.jp/category/8">８</a><a href="https://ejje.weblio.jp/category/9">９</a><a href="https://ejje.weblio.jp/category/0">０</a><br>
+    <a href="https://ejje.weblio.jp/category/sign">記号</a></p>
+    </td>
+    
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+<div class=treeBoxC>
+<h3 class=enclosedMenu id=partOfSpeechTitle>品詞別索引</h3>
+<div id=partOfSpeechBody class=enclosedMenuBody>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%90%8D%E8%A9%9E_1" title="名詞">名詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%8F%AF%E7%AE%97%E5%90%8D%E8%A9%9E_1" title="可算名詞">可算名詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E4%B8%8D%E5%8F%AF%E7%AE%97%E5%90%8D%E8%A9%9E_1" title="不可算名詞">不可算名詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E4%BB%A3%E5%90%8D%E8%A9%9E_1" title="代名詞">代名詞</a></p>
+</td>
+<td>
+<p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%8B%95%E8%A9%9E_1" title="動詞">動詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E8%87%AA%E5%8B%95%E8%A9%9E_1" title="自動詞">自動詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E4%BB%96%E5%8B%95%E8%A9%9E_1" title="他動詞">他動詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%8F%A5%E5%8B%95%E8%A9%9E_1" title="句動詞">句動詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%8A%A9%E5%8B%95%E8%A9%9E_1" title="助動詞">助動詞</a></p>
+</td>
+<td>
+<p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%BD%A2%E5%AE%B9%E8%A9%9E_1" title="形容詞">形容詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%8F%99%E8%BF%B0%E7%9A%84%E7%94%A8%E6%B3%95%E3%81%AE%E5%BD%A2%E5%AE%B9%E8%A9%9E_1" title="叙述的用法の形容詞">叙述的用法の形容詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E9%99%90%E5%AE%9A%E7%94%A8%E6%B3%95%E3%81%AE%E5%BD%A2%E5%AE%B9%E8%A9%9E_1" title="限定用法の形容詞">限定用法の形容詞</a></p>
+</td>
+<td>
+<p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%89%AF%E8%A9%9E_1" title="副詞">副詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%89%8D%E7%BD%AE%E8%A9%9E_1" title="前置詞">前置詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E6%8E%A5%E7%B6%9A%E8%A9%9E_1" title="接続詞">接続詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E9%96%93%E6%8A%95%E8%A9%9E_1" title="間投詞">間投詞</a></p><p><a href="https://ejje.weblio.jp/parts-of-speech/kenej/%E5%86%A0%E8%A9%9E_1" title="冠詞">冠詞</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<hr>
+<h3 class=enclosedMenu ID=categoryEjTitle>英和辞典のカテゴリ</h3>
+<div id=categoryEjBody class=enclosedMenuBody>
+<div class=mainBoxCatB>
+<table>
+<tbody>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1" title="政治・経済">政治・経済</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E7%B5%8C%E6%B8%88_1" title="経済">経済</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E9%87%91%E8%9E%8D%E3%83%BB%E4%BC%9A%E8%A8%88_1" title="金融・会計">金融・会計</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E5%8A%B4%E5%83%8D_1" title="労働">労働</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E7%94%A3%E6%A5%AD_1" title="産業">産業</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E5%8D%B0%E5%88%B7%E3%83%BB%E8%A3%BD%E9%80%A0_1" title="印刷・製造">印刷・製造</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E6%94%BF%E6%B2%BB_1" title="政治">政治</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E6%B3%95%E5%BE%8B_1" title="法律">法律</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%A8%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9_1" title="メディアとニュース">メディアとニュース</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E8%BB%8D%E4%BA%8B_1" title="軍事">軍事</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1" title="自然科学と技術">自然科学と技術</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%8C%96%E5%AD%A6_1" title="化学">化学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E6%B0%97%E8%B1%A1_1" title="気象">気象</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%85%89%E5%AD%A6_1" title="光学">光学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E7%94%9F%E7%90%86_1" title="生理">生理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%9C%B0%E6%96%87_1" title="地文">地文</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E7%B5%B1%E8%A8%88_1" title="統計">統計</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E7%90%86%E5%AD%A6_1" title="理学">理学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E9%9B%BB%E6%B0%97%E3%83%BB%E9%80%9A%E4%BF%A1_1" title="電気・通信">電気・通信</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E7%89%A9%E7%90%86_1" title="物理">物理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E6%95%B0%E5%AD%A6_1" title="数学">数学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%B7%A5%E5%AD%A6_1" title="工学">工学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%9C%B0%E5%AD%A6_1" title="地学">地学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%A4%A9%E6%96%87_1" title="天文">天文</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E8%88%AA%E7%A9%BA%E3%83%BB%E6%B5%B7%E6%B4%8B_1" title="航空・海洋">航空・海洋</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1" title="医学">医学</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E5%8C%BB%E5%AD%A6_2" title="医学">医学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E9%81%BA%E4%BC%9D_1" title="遺伝">遺伝</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E8%A7%A3%E5%89%96_1" title="解剖">解剖</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E5%A4%96%E7%A7%91_1" title="外科">外科</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E6%AD%AF%E7%A7%91_1" title="歯科">歯科</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E7%8D%A3%E5%8C%BB_1" title="獣医">獣医</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E7%97%85%E7%90%86_1" title="病理">病理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E5%85%8D%E7%96%AB_1" title="免疫">免疫</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E8%96%AC%E5%AD%A6_1" title="薬学">薬学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E5%8C%BB%E5%AD%A6_1#%E7%B2%BE%E7%A5%9E%E7%A7%91_1" title="精神科">精神科</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1" title="生物">生物</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E5%8F%A4%E7%94%9F%E7%90%86_1" title="古生理">古生理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E7%94%9F%E7%89%A9_2" title="生物">生物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E5%8B%95%E7%89%A9_1" title="動物">動物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E6%A4%8D%E7%89%A9_1" title="植物">植物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E8%B2%9D_1" title="貝">貝</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E9%AD%9A_1" title="魚">魚</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E7%8A%AC_1" title="犬">犬</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E6%98%86%E8%99%AB_1" title="昆虫">昆虫</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E9%B3%A5_1" title="鳥">鳥</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E6%A8%B9_1" title="樹">樹</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E7%94%9F%E6%85%8B_1" title="生態">生態</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E6%A4%8D%E7%89%A9%E7%97%85%E7%90%86_1" title="植物病理">植物病理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E7%94%9F%E5%8C%96%E5%AD%A6_1" title="生化学">生化学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E7%B4%B0%E8%8F%8C_1" title="細菌">細菌</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E7%89%A9_1#%E5%8F%A4%E7%94%9F%E7%89%A9_1" title="古生物">古生物</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1" title="社会科学">社会科学</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E6%AD%B4%E5%8F%B2_1" title="歴史">歴史</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E5%9C%B0%E7%90%86_1" title="地理">地理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E5%AE%97%E6%95%99%E3%83%BB%E5%93%B2%E5%AD%A6_1" title="宗教・哲学">宗教・哲学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E8%A8%80%E8%AA%9E_1" title="言語">言語</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E5%BF%83%E7%90%86%E5%AD%A6_1" title="心理学">心理学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E6%95%99%E8%82%B2_1" title="教育">教育</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E4%BA%BA%E6%96%87_1" title="人文">人文</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1" title="文芸">文芸</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E6%96%87%E8%8A%B8_2" title="文芸">文芸</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E6%96%87%E5%AD%A6_1" title="文学">文学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81_1" title="文学作品">文学作品</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E3%81%9D%E3%81%AE%E4%BB%96%E6%96%87%E5%AD%A6_1" title="その他文学">その他文学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E7%A5%9E%E8%A9%B1_1" title="神話">神話</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E4%BC%9D%E8%AA%AC_1" title="伝説">伝説</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E8%8A%B8%E8%A1%93_1" title="芸術">芸術</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E6%BC%94%E5%8A%87%E3%83%BB%E8%88%9E%E8%B8%8A_1" title="演劇・舞踊">演劇・舞踊</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%96%87%E8%8A%B8_1#%E7%BE%8E%E8%A1%93_1" title="美術">美術</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1" title="映画・音楽">映画・音楽</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E6%98%A0%E7%94%BB_1" title="映画">映画</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E9%9F%B3%E6%A5%BD_1" title="音楽">音楽</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E3%82%B8%E3%83%A3%E3%82%BA_1" title="ジャズ">ジャズ</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89_1" title="レコード">レコード</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E9%9F%BB%E5%BE%8B_1" title="韻律">韻律</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E9%9F%B3%E5%A3%B0_1" title="音声">音声</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E6%9B%B2%E5%90%8D_1" title="曲名">曲名</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1" title="スポーツ">スポーツ</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_2" title="スポーツ">スポーツ</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E7%AB%B6%E6%8A%80_1" title="競技">競技</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC_1" title="サッカー">サッカー</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%82%B4%E3%83%AB%E3%83%95_1" title="ゴルフ">ゴルフ</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E9%87%8E%E7%90%83_1" title="野球">野球</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%83%90%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB_1" title="バスケットボール">バスケットボール</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%83%86%E3%83%8B%E3%82%B9_1" title="テニス">テニス</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E7%90%83%E6%8A%80_1" title="球技">球技</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E5%B1%8B%E5%86%85_1" title="屋内">屋内</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E5%B1%8B%E5%A4%96_1" title="屋外">屋外</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E6%B0%B4%E6%B3%B3%E7%AB%B6%E6%8A%80_1" title="水泳競技">水泳競技</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1" title="生活・文化">生活・文化</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E7%95%B0%E6%96%87%E5%8C%96_1" title="異文化">異文化</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E8%A1%A3%E9%A3%9F%E4%BD%8F_1" title="衣食住">衣食住</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E5%8D%A0%E3%81%84_1" title="占い">占い</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E9%83%B5%E4%BE%BF_1" title="郵便">郵便</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1" title="趣味">趣味</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E3%82%B2%E3%83%BC%E3%83%A0_1" title="ゲーム">ゲーム</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E3%82%A2%E3%82%A6%E3%83%88%E3%83%89%E3%82%A2_1" title="アウトドア">アウトドア</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E5%86%99%E7%9C%9F_1" title="写真">写真</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E7%B7%A8%E7%89%A9_1" title="編物">編物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E7%B9%94%E7%89%A9_1" title="織物">織物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E5%BF%83%E9%9C%8A_1" title="心霊">心霊</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E5%88%87%E6%89%8B_1" title="切手">切手</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E6%9F%93%E8%89%B2_1" title="染色">染色</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E5%AE%9D%E7%9F%B3_1" title="宝石">宝石</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E6%9C%A8%E5%B7%A5_1" title="木工">木工</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E9%81%8A%E6%88%AF_1" title="遊戯">遊戯</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E8%B6%A3%E5%91%B3_1#%E6%99%82%E8%A8%88_1" title="時計">時計</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenej/%E4%BA%BA%E5%90%8D_1" title="人名">人名</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenej/%E4%BA%BA%E5%90%8D_1#%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E5%90%8D%E5%89%8D_1" title="一般的な名前">一般的な名前</a>
+<a href="https://ejje.weblio.jp/subcategory/kenej/%E4%BA%BA%E5%90%8D_1#%E5%AD%A6%E8%80%85_1" title="学者">学者</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3 class=enclosedMenu ID=categoryJeTitle>和英辞典のカテゴリ</h3>
+<div id=categoryJeBody class=enclosedMenuBody>
+<div class=mainBoxCatB>
+<table>
+<tbody>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1" title="政治・経済">政治・経済</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E7%B5%8C%E6%B8%88_1" title="経済">経済</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E9%87%91%E8%9E%8D%E3%83%BB%E4%BC%9A%E8%A8%88_1" title="金融・会計">金融・会計</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E7%B5%8C%E5%96%B6_1" title="経営">経営</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E5%8A%B4%E5%83%8D_1" title="労働">労働</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E7%94%A3%E6%A5%AD_1" title="産業">産業</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E5%8D%B0%E5%88%B7%E3%83%BB%E8%A3%BD%E9%80%A0_1" title="印刷・製造">印刷・製造</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E6%94%BF%E6%B2%BB_1" title="政治">政治</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E6%B3%95%E5%BE%8B_1" title="法律">法律</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%A8%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9_1" title="メディアとニュース">メディアとニュース</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%94%BF%E6%B2%BB%E3%83%BB%E7%B5%8C%E6%B8%88_1#%E8%BB%8D%E4%BA%8B_1" title="軍事">軍事</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1" title="自然科学と技術">自然科学と技術</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%8C%96%E5%AD%A6_1" title="化学">化学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E6%B0%97%E8%B1%A1_1" title="気象">気象</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%85%89%E5%AD%A6_1" title="光学">光学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E7%94%9F%E7%90%86_1" title="生理">生理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E7%B5%B1%E8%A8%88_1" title="統計">統計</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E9%9B%BB%E6%B0%97%E3%83%BB%E9%80%9A%E4%BF%A1_1" title="電気・通信">電気・通信</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E7%89%A9%E7%90%86_1" title="物理">物理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E6%95%B0%E5%AD%A6_1" title="数学">数学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%B7%A5%E5%AD%A6_1" title="工学">工学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%9C%B0%E5%AD%A6_1" title="地学">地学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E5%A4%A9%E6%96%87_1" title="天文">天文</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E3%81%A8%E6%8A%80%E8%A1%93_1#%E8%88%AA%E7%A9%BA%E3%83%BB%E6%B5%B7%E6%B4%8B_1" title="航空・海洋">航空・海洋</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1" title="医学">医学</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E5%8C%BB%E5%AD%A6_2" title="医学">医学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E9%81%BA%E4%BC%9D_1" title="遺伝">遺伝</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E8%A7%A3%E5%89%96_1" title="解剖">解剖</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E5%A4%96%E7%A7%91_1" title="外科">外科</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E6%AD%AF%E7%A7%91_1" title="歯科">歯科</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E7%97%85%E7%90%86_1" title="病理">病理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E8%96%AC%E5%AD%A6_1" title="薬学">薬学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E5%8C%BB%E5%AD%A6_1#%E7%B2%BE%E7%A5%9E%E7%A7%91_1" title="精神科">精神科</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1" title="生物">生物</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E7%94%9F%E7%89%A9_2" title="生物">生物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E5%8B%95%E7%89%A9_1" title="動物">動物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E6%A4%8D%E7%89%A9_1" title="植物">植物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E8%B2%9D_1" title="貝">貝</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E9%AD%9A_1" title="魚">魚</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E6%98%86%E8%99%AB_1" title="昆虫">昆虫</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E9%B3%A5_1" title="鳥">鳥</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E7%94%9F%E6%85%8B_1" title="生態">生態</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E6%A4%8D%E7%89%A9%E7%97%85%E7%90%86_1" title="植物病理">植物病理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E7%94%9F%E5%8C%96%E5%AD%A6_1" title="生化学">生化学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E7%B4%B0%E8%8F%8C_1" title="細菌">細菌</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E7%89%A9_1#%E5%8F%A4%E7%94%9F%E7%89%A9_1" title="古生物">古生物</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1" title="社会科学">社会科学</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E6%97%A5%E6%9C%AC%E5%8F%B2_1" title="日本史">日本史</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E4%B8%96%E7%95%8C%E5%8F%B2_1" title="世界史">世界史</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E8%A5%BF%E6%B4%8B%E5%8F%B2_1" title="西洋史">西洋史</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E6%AD%B4%E5%8F%B2_1" title="歴史">歴史</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E5%9C%B0%E7%90%86_1" title="地理">地理</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E5%AE%97%E6%95%99%E3%83%BB%E5%93%B2%E5%AD%A6_1" title="宗教・哲学">宗教・哲学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E8%A8%80%E8%AA%9E_1" title="言語">言語</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E5%BF%83%E7%90%86%E5%AD%A6_1" title="心理学">心理学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E6%95%99%E8%82%B2_1" title="教育">教育</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6_1#%E4%BA%BA%E6%96%87_1" title="人文">人文</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1" title="文芸">文芸</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E6%96%87%E8%8A%B8_2" title="文芸">文芸</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E6%96%87%E5%AD%A6_1" title="文学">文学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81_1" title="文学作品">文学作品</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E3%81%9D%E3%81%AE%E4%BB%96%E6%96%87%E5%AD%A6_1" title="その他文学">その他文学</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E7%A5%9E%E8%A9%B1_1" title="神話">神話</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E8%8A%B8%E8%A1%93_1" title="芸術">芸術</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E6%BC%94%E5%8A%87%E3%83%BB%E8%88%9E%E8%B8%8A_1" title="演劇・舞踊">演劇・舞踊</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%96%87%E8%8A%B8_1#%E7%BE%8E%E8%A1%93_1" title="美術">美術</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1" title="映画・音楽">映画・音楽</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E6%98%A0%E7%94%BB_1" title="映画">映画</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E9%9F%B3%E6%A5%BD_1" title="音楽">音楽</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E3%82%B8%E3%83%A3%E3%82%BA_1" title="ジャズ">ジャズ</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E9%9F%B3%E9%9F%BB_1" title="音韻">音韻</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E9%9F%B3%E5%A3%B0_1" title="音声">音声</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E6%98%A0%E7%94%BB%E3%83%BB%E9%9F%B3%E6%A5%BD_1#%E6%9B%B2%E5%90%8D_1" title="曲名">曲名</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1" title="スポーツ">スポーツ</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_2" title="スポーツ">スポーツ</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E7%AB%B6%E6%8A%80_1" title="競技">競技</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC_1" title="サッカー">サッカー</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%82%B4%E3%83%AB%E3%83%95_1" title="ゴルフ">ゴルフ</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E9%87%8E%E7%90%83_1" title="野球">野球</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%83%90%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB_1" title="バスケットボール">バスケットボール</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E3%83%86%E3%83%8B%E3%82%B9_1" title="テニス">テニス</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E7%90%83%E6%8A%80_1" title="球技">球技</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E5%B1%8B%E5%86%85_1" title="屋内">屋内</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E5%B1%8B%E5%A4%96_1" title="屋外">屋外</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84_1#%E6%B0%B4%E6%B3%B3%E7%AB%B6%E6%8A%80_1" title="水泳競技">水泳競技</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1" title="生活・文化">生活・文化</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E4%BA%BA%E7%A8%AE_1" title="人種">人種</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E7%A6%85_1" title="禅">禅</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E5%AE%B6%E6%97%8F_1" title="家族">家族</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E4%BA%BA%E7%94%9F_1" title="人生">人生</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E7%94%9F%E6%B4%BB_1" title="生活">生活</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E9%81%93%E5%85%B7_1" title="道具">道具</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E8%A1%A3%E9%A3%9F%E4%BD%8F_1" title="衣食住">衣食住</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E7%94%9F%E6%B4%BB%E3%83%BB%E6%96%87%E5%8C%96_1#%E5%8D%A0%E3%81%84_1" title="占い">占い</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<h3><a href="https://ejje.weblio.jp/subcategory/kenje/%E8%B6%A3%E5%91%B3_1" title="趣味">趣味</a></h3>
+</td>
+<td class=mainBoxBLdlbBd><a href="https://ejje.weblio.jp/subcategory/kenje/%E8%B6%A3%E5%91%B3_1#%E3%82%B2%E3%83%BC%E3%83%A0_1" title="ゲーム">ゲーム</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%B6%A3%E5%91%B3_1#%E3%82%A2%E3%82%A6%E3%83%88%E3%83%89%E3%82%A2_1" title="アウトドア">アウトドア</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%B6%A3%E5%91%B3_1#%E5%86%99%E7%9C%9F_1" title="写真">写真</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%B6%A3%E5%91%B3_1#%E7%B9%94%E7%89%A9_1" title="織物">織物</a>
+<a href="https://ejje.weblio.jp/subcategory/kenje/%E8%B6%A3%E5%91%B3_1#%E6%9C%A8%E5%B7%A5_1" title="木工">木工</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class=mainBlock>
+<h2><img src="https://weblio.hs.llnwd.net/e7/img/icons/dictionary.png" alt="" class=icon>収録辞書</h2>
+<h3 class=enclosedMenu ID=latestDictTitle>最近追加された辞書</h3><div id=latestDictBody class=enclosedMenuBody>
+<table>
+<tbody>
+<tr>
+<td class=mainBoxBLdlbHd>
+<p><b><a href="https://ejje.weblio.jp/category/dictionary/wejej">「Weblio実用英語辞典」</a></b></p>
+</td>
+<td class=mainBoxBLdlbBd>
+<p>ビジネスや日常会話等で用いられる実用的な英語の表現・言い回しを調べることができます。</p><p><span>(2022/08/26 追加)</span></p>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<p><b><a href="https://ejje.weblio.jp/category/dictionary/gskke">「外務省記者会見英語対訳」</a></b></p>
+</td>
+<td class=mainBoxBLdlbBd>
+<p>外務省の記者会見で用いられたフレーズの英語対訳を掲載しています。</p><p><span>(2022/04/15 追加)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div><br>
+<div class=treeBoxC>
+<h3 class=enclosedMenu id=foldingDictListTitle>収録辞書一覧</h3>
+<div id=foldingDictListBody class=enclosedMenuBody>
+<table>
+<tbody>
+<tr>
+<td class=mainBoxBLdlbHd>
+<b><a href="https://ejje.weblio.jp/category/business" title="ビジネス">ビジネス</a></b>
+</td>
+<td class=mainBoxBLdlbBd>
+<a href="https://ejje.weblio.jp/category/business/gkkry" title="外交関連用語集">外交関連用語集</a><a href="https://ejje.weblio.jp/category/business/ekzyj" title="英和経済用語辞典">英和経済用語辞典</a><a href="https://ejje.weblio.jp/category/business/kznhg" title="経済のにほんご">経済のにほんご</a><a href="https://ejje.weblio.jp/category/business/ifezs" title="英文財務諸表用語集">英文財務諸表用語集</a><a href="https://ejje.weblio.jp/category/business/jjrmw" title="人事労務和英辞典">人事労務和英辞典</a><a href="https://ejje.weblio.jp/category/business/esmhy" title="英和生命保険用語辞典">英和生命保険用語辞典</a><a href="https://ejje.weblio.jp/category/business/esskb" title="英和商品・サービス国際分類名">英和商品・サービス国際分類名</a><a href="https://ejje.weblio.jp/category/business/wnhsb" title="和英日本標準商品分類">和英日本標準商品分類</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<b><a href="https://ejje.weblio.jp/category/occupation" title="業界用語">業界用語</a></b>
+</td>
+<td class=mainBoxBLdlbBd>
+<a href="https://ejje.weblio.jp/category/occupation/kstye" title="警察用語英訳一覧">警察用語英訳一覧</a><a href="https://ejje.weblio.jp/category/occupation/wbrkg" title="和英防衛略語集">和英防衛略語集</a><a href="https://ejje.weblio.jp/category/occupation/wmcny" title="和英マシニング用語集">和英マシニング用語集</a><a href="https://ejje.weblio.jp/category/occupation/eitsk" title="英和ITS関連用語集">英和ITS関連用語集</a><a href="https://ejje.weblio.jp/category/occupation/skswj" title="作業環境測定和英辞典">作業環境測定和英辞典</a><a href="https://ejje.weblio.jp/category/occupation/rmsjy" title="ラムサール条約用語和英対訳集">ラムサール条約用語和英対訳集</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<b><a href="https://ejje.weblio.jp/category/computer" title="コンピュータ">コンピュータ</a></b>
+</td>
+<td class=mainBoxBLdlbBd>
+<a href="https://ejje.weblio.jp/category/computer/dnkds" title="電気・電子用語集">電気・電子用語集</a><a href="https://ejje.weblio.jp/category/computer/mcrsy" title="マイクロソフト用語集">マイクロソフト用語集</a><a href="https://ejje.weblio.jp/category/computer/cmpyg" title="コンピューター用語辞典">コンピューター用語辞典</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<b><a href="https://ejje.weblio.jp/category/engineering" title="工学">工学</a></b>
+</td>
+<td class=mainBoxBLdlbBd>
+<a href="https://ejje.weblio.jp/category/engineering/kggjr" title="科学技術論文動詞集">科学技術論文動詞集</a><a href="https://ejje.weblio.jp/category/engineering/kkkge" title="機械工学英和和英辞典">機械工学英和和英辞典</a><a href="https://ejje.weblio.jp/category/engineering/wujty" title="和英宇宙実験対訳用語集">和英宇宙実験対訳用語集</a><a href="https://ejje.weblio.jp/category/engineering/dnksg" title="電気制御英語辞典">電気制御英語辞典</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<b><a href="https://ejje.weblio.jp/category/academic" title="学問">学問</a></b>
+</td>
+<td class=mainBoxBLdlbBd>
+<a href="https://ejje.weblio.jp/category/academic/hrhdt" title="法令名翻訳データ">法令名翻訳データ</a><a href="https://ejje.weblio.jp/category/academic/hynht" title="法令用語日英標準対訳辞書">法令用語日英標準対訳辞書</a><a href="https://ejje.weblio.jp/category/academic/bkkse" title="部局課名・官職名英訳辞典">部局課名・官職名英訳辞典</a><a href="https://ejje.weblio.jp/category/academic/edknh" title="英和独禁法用語辞典">英和独禁法用語辞典</a><a href="https://ejje.weblio.jp/category/academic/gkjet" title="学術用語英和対訳集">学術用語英和対訳集</a><a href="https://ejje.weblio.jp/category/academic/jstkg" title="JST科学技術用語日英対訳辞書">JST科学技術用語日英対訳辞書</a><a href="https://ejje.weblio.jp/category/academic/egrkj" title="英語論文検索辞書">英語論文検索辞書</a><a href="https://ejje.weblio.jp/category/academic/ntggy" title="日英対訳言語学用語集">日英対訳言語学用語集</a><a href="https://ejje.weblio.jp/category/academic/erbtk" title="英語論文投稿用語集">英語論文投稿用語集</a><a href="https://ejje.weblio.jp/category/academic/wzgky" title="和英図学用語辞書">和英図学用語辞書</a><a href="https://ejje.weblio.jp/category/academic/egisy" title="英和GIS用語集">英和GIS用語集</a><a href="https://ejje.weblio.jp/category/academic/ebsiy" title="英和防災用語集">英和防災用語集</a><a href="https://ejje.weblio.jp/category/academic/itery" title="ITER（国際熱核融合実験炉）用語対訳辞書">ITER（国際熱核融合実験炉）用語対訳辞書</a><a href="https://ejje.weblio.jp/category/academic/dgpws" title="脱原発和英小辞典">脱原発和英小辞典</a><a href="https://ejje.weblio.jp/category/academic/wkyky" title="和英教育用語辞典">和英教育用語辞典</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<b><a href="https://ejje.weblio.jp/category/healthcare" title="ヘルスケア">ヘルスケア</a></b>
+</td>
+<td class=mainBoxBLdlbBd>
+<a href="https://ejje.weblio.jp/category/healthcare/pdqge" title="PDQ®がん用語辞書 英語版">PDQ®がん用語辞書 英語版</a><a href="https://ejje.weblio.jp/category/healthcare/prcry" title="プライマリ・ケア英和辞典">プライマリ・ケア英和辞典</a><a href="https://ejje.weblio.jp/category/healthcare/eigky" title="英和医学用語集">英和医学用語集</a><a href="https://ejje.weblio.jp/category/healthcare/ekbys" title="英和解剖学用語集">英和解剖学用語集</a><a href="https://ejje.weblio.jp/category/healthcare/ebrsk" title="英和病理所見用語集">英和病理所見用語集</a><a href="https://ejje.weblio.jp/category/healthcare/gnksy" title="眼科専門用語辞書">眼科専門用語辞書</a><a href="https://ejje.weblio.jp/category/healthcare/eknky" title="英和環境感染学用語集">英和環境感染学用語集</a><a href="https://ejje.weblio.jp/category/healthcare/esnrh" title="英和歯内療法用語集">英和歯内療法用語集</a><a href="https://ejje.weblio.jp/category/healthcare/ekscy/a" title="英和寄生虫学用語集">英和寄生虫学用語集</a><a href="https://ejje.weblio.jp/category/healthcare/sdsiy" title="集団災害医学用語">集団災害医学用語</a><a href="https://ejje.weblio.jp/category/healthcare/ejkdb" title="英和実験動物学用語集">英和実験動物学用語集</a><a href="https://ejje.weblio.jp/category/healthcare/liscj" title="ライフサイエンス辞書">ライフサイエンス辞書</a>
+</td>
+</tr>
+<tr>
+<td class=mainBoxBLdlbHd>
+<b><a href="https://ejje.weblio.jp/category/dictionary" title="辞書・百科事典">辞書・百科事典</a></b>
+</td>
+<td class=mainBoxBLdlbBd>
+<a href="https://ejje.weblio.jp/category/dictionary/kenej/a" title="研究社 新英和中辞典">研究社 新英和中辞典</a><a href="https://ejje.weblio.jp/category/dictionary/kenje" title="研究社 新和英中辞典">研究社 新和英中辞典</a><a href="https://ejje.weblio.jp/category/dictionary/weiys" title="英語での言い方用例集">英語での言い方用例集</a><a href="https://ejje.weblio.jp/category/dictionary/egtej/a" title="Eゲイト英和辞典">Eゲイト英和辞典</a><a href="https://ejje.weblio.jp/category/dictionary/wejej" title="Weblio実用英語辞典">Weblio実用英語辞典</a><span style="color:red; font-size:11px; padding-left:2px;">new!</span><a href="https://ejje.weblio.jp/category/dictionary/ctbds/a" title="コア・セオリー英語表現(基本動詞)">コア・セオリー英語表現(基本動詞)</a><a href="https://ejje.weblio.jp/category/dictionary/hypej" title="ハイパー英語辞書">ハイパー英語辞書</a><a href="https://ejje.weblio.jp/category/dictionary/jmdct" title="JMdict">JMdict</a><a href="https://ejje.weblio.jp/category/dictionary/ektwz" title="英語ことわざ教訓辞典">英語ことわざ教訓辞典</a><a href="https://ejje.weblio.jp/category/dictionary/kejcy/a" title="研究社 英和コンピューター用語辞典">研究社 英和コンピューター用語辞典</a><a href="https://ejje.weblio.jp/category/dictionary/rbehj" title="旅行・ビジネス英会話翻訳">旅行・ビジネス英会話翻訳</a><a href="https://ejje.weblio.jp/category/dictionary/kckke" title="金融庁記者会見英語対訳">金融庁記者会見英語対訳</a><a href="https://ejje.weblio.jp/category/dictionary/gskke" title="外務省記者会見英語対訳">外務省記者会見英語対訳</a><a href="https://ejje.weblio.jp/category/dictionary/tteba" title="Tatoeba">Tatoeba</a><a href="https://ejje.weblio.jp/category/dictionary/nwnej" title="日本語WordNet(英和)">日本語WordNet(英和)</a><a href="https://ejje.weblio.jp/category/dictionary/edrnt" title="EDR日英対訳辞書">EDR日英対訳辞書</a><a href="https://ejje.weblio.jp/category/dictionary/neens" title="日英・英日専門用語辞書">日英・英日専門用語辞書</a><a href="https://ejje.weblio.jp/category/dictionary/nekym" title="日英固有名詞辞典">日英固有名詞辞典</a><a href="https://ejje.weblio.jp/category/dictionary/jmned" title="JMnedict">JMnedict</a><a href="https://ejje.weblio.jp/category/dictionary/idsmt/a" title="遺伝子名称シソーラス">遺伝子名称シソーラス</a><a href="https://ejje.weblio.jp/category/dictionary/wejhs/a" title="Weblio派生語辞書">Weblio派生語辞書</a><a href="https://ejje.weblio.jp/category/dictionary/wkgje" title="Weblio記号和英辞書">Weblio記号和英辞書</a><a href="https://ejje.weblio.jp/category/dictionary/wwsej" title="Weblio和製英語辞書">Weblio和製英語辞書</a><a href="https://ejje.weblio.jp/category/dictionary/wehgj" title="Weblio英語表現辞典">Weblio英語表現辞典</a><a href="https://ejje.weblio.jp/category/dictionary/eidhg" title="英語イディオム表現辞典">英語イディオム表現辞典</a><a href="https://ejje.weblio.jp/category/dictionary/mlerj" title="メール英語例文辞書">メール英語例文辞書</a><a href="https://ejje.weblio.jp/category/dictionary/wegim" title="Weblio英語言い回し辞典">Weblio英語言い回し辞典</a><a href="https://ejje.weblio.jp/category/dictionary/intsj" title="インターネットスラング英和辞典">インターネットスラング英和辞典</a><a href="https://ejje.weblio.jp/category/dictionary/skslg" title="最強のスラング英会話">最強のスラング英会話</a><a href="https://ejje.weblio.jp/category/dictionary/bbsbe" title="場面別・シーン別英語表現辞典">場面別・シーン別英語表現辞典</a><a href="https://ejje.weblio.jp/category/dictionary/stwdj" title="斎藤和英大辞典">斎藤和英大辞典</a><a href="https://ejje.weblio.jp/category/dictionary/wsmyg" title="Weblio専門用語対訳辞書">Weblio専門用語対訳辞書</a><a href="https://ejje.weblio.jp/category/dictionary/wejty" title="Weblio英和対訳辞書">Weblio英和対訳辞書</a><a href="https://ejje.weblio.jp/category/dictionary/jktke/a" title="人口統計学英英辞書">人口統計学英英辞書</a><a href="https://ejje.weblio.jp/category/dictionary/enwik/a" title="Wiktionary英語版">Wiktionary英語版</a><a href="https://ejje.weblio.jp/category/dictionary/wkpen/a" title="ウィキペディア英語版">ウィキペディア英語版</a><a href="https://ejje.weblio.jp/category/dictionary/werbj" title="Weblio例文辞書">Weblio例文辞書</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class=mainBlock>
+<h2><img src="https://weblio.hs.llnwd.net/e7/img/icons/w.png" alt="" class=icon>weblio英和和英辞典とは</h2>
+<div id=weblioEjjeIntro>
+<h3 class=enclosedMenu id=howToUseTitle>Weblio英和辞典・和英辞典の使い方</h3>
+<div id=howToUseBody class=enclosedMenuBody>
+<h4 class=contLST>英和辞典・和英辞典の検索の仕方</h4>
+<ol>
+<li>検索ボックスにキーワードを入力して「項目を検索」ボタンをクリック。</li>
+<li>英語を入力すれば英和辞典で、日本語を入力すれば和英辞典で意味を検索できます。</li>
+<li> <a href="https://www.weblio.jp/wbr/CHUJITEN/S-A84EB96_E-A85070C.wav"><img src="https://weblio.hs.llnwd.net/e7/img/icons/iconEjjeWav.png" alt=""></a>　英和辞書のスピーカーのアイコンをクリックすると、英語の発音が聞けます。</li>
+</ol>
+<p><a href="https://ejje.weblio.jp/explanatory-notes/9883e0e" rel="nofollow">英和辞典の説明を詳しく見る：研究社「まえがき･凡例･付録」</a></p>
+<br>
+<h4>ヘルプ</h4>
+<table class=help>
+<tbody>
+<tr>
+<td>
+<div><p><a href="https://help.weblio.jp/ejje/endictionary/e_guide/e_g_dictionary/h0120">基本的な使い方</a></p><p><span>英和辞典・和英辞典の基本的な使い方について</span></p></div><div><p><a href="https://help.weblio.jp/ejje/endictionary/e_info/e_i_dictionary/h0022">基本的な機能</a></p><p><span>辞書機能についての解説</span></p></div><div><p><a href="https://help.weblio.jp/ejje/endictionary/e_guide/e_g_dictionary/h0121">便利な機能</a></p><p><span>知っていると便利な機能についての説明</span></p></div><div><p><a href="https://help.weblio.jp/ejje/endictionary/e_guide/e_g_dictionary/h0123">検索結果がなかった場合の補助機能</a></p><p><span>検索結果がなかった場合に便利な機能の説明</span></p></div><div><p><a href="https://help.weblio.jp/ejje/endictionary/e_info/e_i_dictionary/h0114">発音記号について</a></p><p><span>英語の発音記号について</span></p></div>
+</td>
+<td>
+<div><p><a href="https://help.weblio.jp/ejje/endictionary/e_faq">おしらせ・よくある質問</a></p><p><span>英和辞典に関するお知らせやよくある質問</span></p></div><div><p><a href="https://help.weblio.jp/ejje/endictionary/e_guide/e_g_aextension/h0133">ブラウザに検索機能を組み込む</a></p><p><span>より手軽に英和辞典・和英辞典を利用する方法</span></p></div><div><p><a href="https://help.weblio.jp/ejje/endictionary/e_guide/e_g_aextension/h0136">Adobe Readerに検索機能を組み込む</a></p><p><span>PDF文書で英和辞典を利用する方法</span></p></div><div><p><a href="https://help.weblio.jp/ejje/endictionary/e_guide/e_g_csentence/h0126">セーフサーチをオン／オフにする</a></p><p><span>セーフサーチをオン／オフにする</span></p></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h3 class=enclosedMenu id=weblioIsTitle>Weblio英和辞典・和英辞典とは</h3>
+<div id=weblioIsBody class=enclosedMenuBody>
+<p>
+Weblio英和辞典・和英辞典は、研究社『新英和中辞典』『新和英中辞典』を中心に85種類の英和辞典・和英辞典、248万語の英語と252万語の日本語、合計約500万語を一度に検索できる、国内最大級のオンライン英語辞書です。英語の意味を英和辞典で調べられるだけでなく、豊富な英語の用例や、英語の発音も参照できます。基本的な英単語の意味・用例から、専門的な英語の意味・訳語まで調べることができる、英語の学習に最適な英語辞書です。</p>
+<br>
+<h4>Weblio英和辞典・和英辞典の主な特長</h4>
+<ul>
+<li>複数の英和辞典や和英辞書から、英語を一度に検索して意味を表示します。</li>
+<li>英語でも日本語でも検索できます。英単語の場合は英和辞典が、日本語の場合は和英辞典がヒットします。</li>
+<li>本文中の英語や日本語から、その言葉の意味を解説している英和辞典・和英辞典の記事にリンクしています。</li>
+<li>英語のイディオムや成句の意味を英和辞典で調べることができます。</li>
+<li>「ランダム表示」では英語や日本語の解説をランダムに選択して意味を表示します。</li>
+</ul>
+<br>
+<h4 class=contLST>Weblio英和辞典・和英辞典は、こんなときに便利です</h4>
+<ul>
+<li>とにかく英語の収録語数が多い英語辞書で意味を調べたいとき</li>
+<li>英語の専門用語の意味や訳語を調べたいとき</li>
+<li>英和辞典と和英辞典の機能を同時に使って意味を調べたいとき</li>
+<li>英語の意味を調べると、解説文中の英語や日本語の意味も調べたくなるとき</li>
+</ul>
+</div>
+<br>
+<hr>
+<h3 class=enclosedMenu ID=userGuideTitle>英和・和英辞典ガイド</h3><div id=userGuideBody class=enclosedMenuBody><table class=mainBoxBGD><tr><td><p><span><a href="https://help.weblio.jp/ejje/endictionary/e_info/e_i_dictionary/h0115">Weblio英和・和英辞典とは?</a></span></p>
+<td><p><span><a href="https://help.weblio.jp/ejje/endictionary/e_faq">Weblio英和辞典のFAQ（よくある質問と答え）</a></span></p>
+</tr><tr><td><p><span><a href="https://help.weblio.jp/ejje/endictionary/e_info/e_i_dictionary/h0116">学習レベルの目安</a></span></p>
+</td><td><p><span><a href="https://ejje.weblio.jp/tips/guide/feature">Weblio英和辞典の特徴</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/guide/history">英和辞典の歴史</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/guide/corpus">英和辞典とコーパス</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/guide/mailnews">メール配信のご案内</a></span></p>
+</td><td><p><span><a href="https://ejje.weblio.jp/tips/dictlist">英和辞典 辞書一覧</a></span></p>
+</td></tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/partnerlogo">英和辞典 提供元一覧</a></span></p>
+</td><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/TOEIC%C2%AE">TOEIC®関連書籍</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/TOEFL">TOEFL関係の本</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/GMAT">GMATの参考書</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E8%8B%B1%E6%A4%9C1%E7%B4%9A">英検1級関連書籍</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E8%8B%B1%E6%A4%9C%E6%BA%961%E7%B4%9A">英検準1級関係の本</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E8%8B%B1%E6%A4%9C2%E7%B4%9A">英検2級の参考書</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E8%8B%B1%E6%A4%9C%E6%BA%962%E7%B4%9A">英検準2級関連書籍</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E5%9B%BD%E9%80%A3%E8%8B%B1%E6%A4%9C">国連英検関係の本</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E8%8B%B1%E8%AA%9E">ビジネス英語の参考書</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E8%8B%B1%E4%BC%9A%E8%A9%B1">ビジネス英会話関連書籍</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0%E5%AF%BE%E7%AD%96">リスニング対策関係の本</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E8%8B%B1%E5%92%8C%E8%BE%9E%E5%85%B8">英和辞典の参考書</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E5%92%8C%E8%8B%B1%E8%BE%9E%E5%85%B8">和英辞典関連書籍</a></span></p>
+</tr><tr><td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/English+Dictionary">English Dictionary関係の本</a></span></p>
+<td><p><span><a href="https://ejje.weblio.jp/tips/englishbooks/%E9%9B%BB%E5%AD%90%E8%BE%9E%E6%9B%B8">電子辞書の参考書</a></span></p>
+</td></tr></table></div></div>
+</div>
+</div>
+<div id="side" style="margin-top:-3px;">
+
+    <div class=sideBlock>
+            <div class=indexSideAdTop>
+                <div id="ejjeRightTopAdId" style="min-width: 300px; min-height: 100px;">
+            <div id="div-gpt-ad-1635315293934-0" class=""  style="">
+    <script>
+            googletag.cmd.push(function () {
+                googletag.display('div-gpt-ad-1635315293934-0');
+            });
+        </script>
+    </div>
+</div>
+    </div>
+        </div>
+    <div class="sideBlock userInfoBoxR">
+        <div class="userInfo">
+    <b>こんにちは&nbsp;ゲスト&nbsp;さん</b>
+    <table>
+        <tr>
+            <td class="left-cell">
+                <a href="https://uwl.weblio.jp/accounts/login-entry?done=https%3A%2F%2Fejje.weblio.jp%2F&amp;wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=prem-icon_abatar&amp;wpm_campaign=ejje_top_icon_abatar">
+                    <img src="https://weblio.hs.llnwd.net/e7/img/icons/avatar.png" alt="" class="icon" onmouseover="this.style.opacity='0.5'; this.style.filter='alpha(opacity=50)';" onmouseout="this.style.opacity='1.0'; this.style.filter='alpha(opacity=100)';">
+                </a><br>
+                <a href="https://uwl.weblio.jp/accounts/login-entry?done=https%3A%2F%2Fejje.weblio.jp%2F&amp;wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=prem-under_icon_login&amp;wpm_campaign=ejje_top_under_icon_login" title="" style="font-size:12px;font-weight:bold;" class="userInfoLoginLink">ログイン</a><br>
+                </td>
+            <td class="right-cell">
+                <p class="free-description"><span>Weblio会員<span class="small">(無料)</span></span>になると</p>
+                    <div class="merits">
+                        <p><img src="https://weblio.hs.llnwd.net/e7/img/icons/icon_checkbox.png" alt="会員登録のメリット">検索履歴を保存できる！</p>
+                        <p><img src="https://weblio.hs.llnwd.net/e7/img/icons/icon_checkbox.png" alt="会員登録のメリット">語彙力診断の実施回数増加！</p>
+                    </div>
+                    <a class="free-button gtm-freeReg-up" onclick="setFormFocus();return cu(this, 'https://accounts.weblio.jp/uwl/register/user-entry')" href="https://accounts.weblio.jp/uwl/register/user-entry" title="">
+                        <img alt="無料会員に登録する" src="https://weblio.hs.llnwd.net/e7/img/icons/icon_free_register_pc_button.png">
+                    </a>
+                </td>
+        </tr>
+
+        </table>
+    <a class="premium-service-button non" href="https://uwl.weblio.jp/ps/index" target="_blank"></a>
+    </div>
+<div id="ejjeRightMiddleAdId" style="height:600px; margin:10px auto; width:300px;"></div>
+        </div>
+    <div id=pinned-content-placeholder></div>
+        <script type="text/javascript">PinnedManager.init("#pinned-content-placeholder");PinnedManager.render();</script>
+    <div class=sideBlock>
+        <b class=sideRankTtl><img src="https://weblio.hs.llnwd.net/e7/img/icons/magnify.png" alt="" class=icon>みんなの検索ランキング</b>
+<ul ID=indexSideRanking>
+<li>
+<div>1</div><a href="https://ejje.weblio.jp/content/Case?erl=true" title="Case" rel="nofollow">
+Case
+</a>
+</li>
+<li>
+<div>2</div><a href="https://ejje.weblio.jp/content/what+...?erl=true" title="what ..." rel="nofollow">
+what ...
+</a>
+</li>
+<li>
+<div>3</div><a href="https://ejje.weblio.jp/content/no+vacancy?erl=true" title="no vacancy" rel="nofollow">
+no vacancy
+</a>
+</li>
+<li>
+<div>4</div><a href="https://ejje.weblio.jp/content/stand+up+for?erl=true" title="stand up for" rel="nofollow">
+stand up for
+</a>
+</li>
+<li>
+<div>5</div><a href="https://ejje.weblio.jp/content/vacancy?erl=true" title="vacancy" rel="nofollow">
+vacancy
+</a>
+</li>
+<li>
+<div>6</div><a href="https://ejje.weblio.jp/content/%E3%83%9F%E3%82%B9av?erl=true" title="ミスav" rel="nofollow">
+ミスav
+</a>
+</li>
+<li>
+<div>7</div><a href="https://ejje.weblio.jp/content/while?erl=true" title="while" rel="nofollow">
+while
+</a>
+</li>
+<li>
+<div>8</div><a href="https://ejje.weblio.jp/content/present?erl=true" title="present" rel="nofollow">
+present
+</a>
+</li>
+<li>
+<div>9</div><a href="https://ejje.weblio.jp/content/address?erl=true" title="address" rel="nofollow">
+address
+</a>
+</li>
+<li>
+<div>10</div><a href="https://ejje.weblio.jp/content/designated+hitter?erl=true" title="designated hitter" rel="nofollow">
+designated hitter
+</a>
+</li>
+</ul>
+<div class="commonBtn rankMrBtn" onclick="ht(this, 'https://ejje.weblio.jp/ranking');" onmousedown="displayPushedButton(this, 0, 2);" onmouseup="this.setAttribute('style', '');" onmouseover="changeBackgroundColor(this, '#faa044');" onmouseout="this.setAttribute('style', '');"><a onclick="return cu(this, 'https://ejje.weblio.jp/ranking')" href="https://ejje.weblio.jp/ranking" title="">もっとランキングを見る</a></div>
+</div>
+        <div id="sideBHModule" class="sideBlock"><b class="sideRankTtl"><img src="https://weblio.hs.llnwd.net/e7/img/icons/history-clock-button.png" alt="" class="icon">閲覧履歴</b><div id="sideBHBody"><div class="module-wrap-non-member"><div><img src="https://weblio.hs.llnwd.net/e7/img/icons/reg_balloon_right.png" alt=""></div><span class="icon-wrap"><img src="https://weblio.hs.llnwd.net/e7/img/icons/note_pc.png" alt=""></span><span class="registration-message"><span>無料会員登録</span>をすると、<br>単語の閲覧履歴を<br>確認できます。</span><a class="commonBtn" href="https://uwl.weblio.jp">無料会員に登録する</a></div></div></div>
+<div class="sideBlock" style="text-align:center;">
+                <div id="ejjeRightBottomAdId"></div>
+            </div>
+        <div class="sideBlock userInfoBoxR2">
+            <div class="userInfo">
+    <b>こんにちは&nbsp;ゲスト&nbsp;さん</b>
+    <table>
+        <tr>
+            <td class="left-cell">
+                <a href="https://uwl.weblio.jp/accounts/login-entry?done=https%3A%2F%2Fejje.weblio.jp%2F&amp;wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=prem-icon_abatar&amp;wpm_campaign=ejje_top_icon_abatar">
+                    <img src="https://weblio.hs.llnwd.net/e7/img/icons/avatar.png" alt="" class="icon" onmouseover="this.style.opacity='0.5'; this.style.filter='alpha(opacity=50)';" onmouseout="this.style.opacity='1.0'; this.style.filter='alpha(opacity=100)';">
+                </a><br>
+                <a href="https://uwl.weblio.jp/accounts/login-entry?done=https%3A%2F%2Fejje.weblio.jp%2F&amp;wpm_source=weblio&amp;wpm_medium=link&amp;wpm_content=prem-under_icon_login&amp;wpm_campaign=ejje_top_under_icon_login" title="" style="font-size:12px;font-weight:bold;" class="userInfoLoginLink">ログイン</a><br>
+                </td>
+            <td class="right-cell">
+                <p class="free-description"><span>Weblio会員<span class="small">(無料)</span></span>になると</p>
+                    <div class="merits">
+                        <p><img src="https://weblio.hs.llnwd.net/e7/img/icons/icon_checkbox.png" alt="会員登録のメリット">検索履歴を保存できる！</p>
+                        <p><img src="https://weblio.hs.llnwd.net/e7/img/icons/icon_checkbox.png" alt="会員登録のメリット">語彙力診断の実施回数増加！</p>
+                    </div>
+                    <a class="free-button gtm-freeReg-dn" onclick="setFormFocus();return cu(this, 'https://accounts.weblio.jp/uwl/register/user-entry')" href="https://accounts.weblio.jp/uwl/register/user-entry" title="">
+                        <img alt="無料会員に登録する" src="https://weblio.hs.llnwd.net/e7/img/icons/icon_free_register_pc_button.png">
+                    </a>
+                </td>
+        </tr>
+
+        </table>
+    <a class="premium-service-button non" href="https://uwl.weblio.jp/ps/index" target="_blank"></a>
+    </div>
+</div>
+        </div>
+<br class=clr>
+
+</div>
+</div>
+
+<div id="footFixAdBar" >
+<div class="footFixBarW">
+<!-- /2211331/Weblio_PC_ejje_Overlay_728_90 -->
+<div id="ejjeFooterOverlayAdId"></div>
+</div>
+</div>
+<div ID=footWrp>
+<div ID=foot>
+
+<table ID=footBox summary="フッタリンクのテーブル">
+<tr>
+<td>
+<div class="fb-page" data-href="https://www.facebook.com/weblio" data-width="370" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true" style="padding-bottom:15px;"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/weblio/"><a href="https://www.facebook.com/weblio/">Weblio英和・和英辞典</a></blockquote></div></div>
+<div style="width:470px;">
+<div style="display:inline-block;">
+<b class=footBoxH>
+ご利用にあたって
+</b>
+<div class="footBoxB footMiniBox">
+<p><a href="https://help.weblio.jp/ejje/endictionary/e_info/e_i_dictionary/h0115">Weblio英和・和英辞典とは</a></p>
+<p><a href="https://help.weblio.jp/ejje/endictionary/e_guide/e_g_dictionary/h0120">検索の仕方</a></p>
+<p><a href="https://www.weblio.jp/info/terms.jsp">利用規約</a></p>
+<p><a href="https://www.weblio.jp/info/privacy.jsp">プライバシーポリシー</a></p>
+<p><a href="https://www.weblio.jp/info/sitemap.jsp">サイトマップ</a></p>
+<p><a href="https://www.weblio.jp">辞書総合TOP</a></p>
+<p><a href="https://help.weblio.jp/ejje">ヘルプ</a></p>
+</div>
+<b class=footBoxH>
+便利な機能
+</b>
+<div class="footBoxB footMiniBox">
+<p><a href="https://help.weblio.jp/ejje/company/c_info/h0004">ウェブリオのアプリ</a></p>
+</div>
+</div>
+<div style="display:inline-block; padding:2px 0 0 40px; vertical-align:top; word-wrap:break-word;">
+<b class=footBoxH>
+お問合せ・ご要望
+</b>
+<div class="footBoxB footMiniBox">
+<p><a href="https://help.weblio.jp/feedback">お問い合わせ</a></p>
+</div>
+<b class=footBoxH>
+会社概要
+</b>
+<div class="footBoxB footMiniBox">
+<p><a href="https://gras-group.co.jp/">公式企業ページ</a></p>
+<p><a href="https://gras-group.co.jp/company/">会社情報</a></p>
+<p><a href="https://gras-group.co.jp/careers/">採用情報</a></p>
+</div>
+</div>
+</div>
+</td>
+<td>
+<b class=footBoxH>
+ウェブリオのサービス
+</b>
+<div class=footBoxB>
+<p><a href="https://www.weblio.jp/" title="辞典・百科事典の検索サービス - Weblio辞書">Weblio 辞書</a></p>
+<p><a href="https://thesaurus.weblio.jp/" title="類語辞典・シソーラス・対義語 - Weblio辞書">類語・対義語辞典</a></p>
+<p><a href="https://ejje.weblio.jp/" title="英和辞典・和英辞典 - Weblio辞書">英和辞典・和英辞典</a></p>
+<p><a href="https://translate.weblio.jp/" title="Weblio 翻訳">Weblio翻訳</a></p>
+<p><a href="https://eikaiwa.weblio.jp/" title="オンライン英会話">オンライン英会話</a></p>
+<p><a href="https://cjjc.weblio.jp/" title="中国語辞書 - Weblio日中中日辞典">日中中日辞典</a></p>
+<p><a href="https://kjjk.weblio.jp/" title="韓国語辞書 - Weblio日韓韓日辞典">日韓韓日辞典</a></p>
+<p><a href="https://fjjf.weblio.jp/" title="フランス語辞書 - Weblioフランス語辞典">フランス語辞典</a></p>
+<p><a href="https://njjn.weblio.jp/" title="インドネシア語辞書 - Weblioインドネシア語辞典">インドネシア語辞典</a></p>
+<p><a href="https://tjjt.weblio.jp/" title="タイ語辞書 - Weblioタイ語辞典">タイ語辞典</a></p>
+<p><a href="https://vjjv.weblio.jp/" title="ベトナム語辞書 - Weblioベトナム語辞典">ベトナム語辞典</a></p>
+<p><a href="https://kobun.weblio.jp/" title="古文辞書 - Weblio古語辞典">古語辞典</a></p>
+<p><a href="https://shuwa.weblio.jp/" title="手話辞典・手話動画 - Weblio辞書">手話辞典</a></p>
+<p><a href="http://www.sophia-it.com/">IT用語辞典バイナリ</a></p>
+<p><a href="https://qa.weblio.jp/" title="英語の質問箱">英語の質問箱</a></p>
+<p><a href="https://eikaiwa.weblio.jp/ninja-eikaiwa/" title="英語コーチング比較・口コミなら「忍者英会話」">英語コーチング比較・口コミなら「忍者英会話」</a></p>
+<p><a href="https://all-eikaiwa.com/" title="オンライン英会話比較・口コミなら「ALL英会話」">オンライン英会話比較・口コミなら「ALL英会話」</a></p>
+<p><a href="https://school.weblio.jp/" title="School weblio(スクウェブ・スクリオ)">School weblio(スクウェブ・スクリオ)</a></p>
+<p><a href="https://eikaiwa.weblio.jp/school/" title="学校向けオンライン英会話|中学・高校への学校導入支援">学校向けオンライン英会話|中学・高校への学校導入支援</a></p>
+<p><a href="https://eikaiwa.weblio.jp/school/lp/writing-test/" title="学校向け英語ライティングテスト|英検対策のための英文添削">学校向け英語ライティングテスト|英検対策のための英文添削</a></p>
+<p><a href="https://online-study-tour.weblio.jp/" title="海外インターンシップならWeb旅（ウェブタビ）">海外インターンシップならWeb旅（ウェブタビ）</a></p>
+<p><a href="https://ejje.weblio.jp/lpage/new-words/" title="英和和英辞典に新しく追加された用語一覧">英和和英辞典に新しく追加された用語一覧</a></p>
+<p><a href="https://ejje.weblio.jp/lpage/renewal-words/" title="英和和英辞典で最近更新された用語一覧">英和和英辞典で最近更新された用語一覧</a></p>
+<p><a href="https://multiees.weblio.jp/" title="Multiees | Translation in context - French, English">Multiees | Translation in context - French, English</a></p>
+</div>
+</td>
+<td>
+
+<div id=fdbkWrp>
+</div>
+<div class="footer_banner free">
+  <div class="title">
+    Weblio会員<span class="small">(無料)</span>なら便利機能が満載!
+  </div>
+  <div class="content">
+    <ul class="features">
+      <li class="search-history">
+        <strong>検索履歴</strong>を保存できる
+      </li>
+      <li class="vocab-test">
+        診断テスト回数が2回から<strong>4回に増加</strong>
+      </li>
+    </ul>
+    <a href="https://accounts.weblio.jp/uwl/register/user-entry?serviceStr=uwl" class="button">
+      <img src="https://weblio.hs.llnwd.net/e7/img/banner/free-button.png" alt="Weblio会員登録(無料)" />
+    </a>
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+
+<div ID=footBottomWrp>
+<div ID=footBottom>
+
+<p ID=footCr>&copy;2024&nbsp;GRAS Group, Inc.<a href="https://ejje.weblio.jp/index.rdf" title="RSS">RSS</a>
+&nbsp;&nbsp;<b class=server2>&nbsp;</b><b class=server3>&nbsp;</b></p>
+
+</div>
+</div>
+
+<script type="text/javascript">
+var cookieName = "1w_";
+var MAX_AGE = 60 * 60 * 24 * 7;
+if (false) {
+    cookieName = cookieName + "turbo";
+} else if (true){
+    cookieName = cookieName + '';
+}
+if (cookieName.length > 3) {
+    document.cookie = cookieName + '=1;path=' + '/' + ';max-age=' + MAX_AGE;
+}
+</script>
+<script type="text/javascript" src="https://weblio.hs.llnwd.net/e7/script/include/free_or_premium_registration_cookie.js?tst=2024102913"></script>
+<script>
+deleteFreeOrPremiumRegistrationCookie(false, 'conversion_free_reg03ee56fc5f60ec2332bef51eb777a36d', 'weblio.jp');
+deleteFreeOrPremiumRegistrationCookie(false, 'conversion_premium_reg03ee56fc5f60ec2332bef51eb777a36d', 'weblio.jp');
+</script>
+
+<span style="display:none;" id="memberState">non-member</span>
+<div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+</div>
+
+<script type="text/javascript" src="https://weblio.hs.llnwd.net/e7/script/include/weblio_service_panel.js?tst=2024102913" charset="UTF-8"></script>
+<script>
+(function() {
+    "use strict";
+
+    
+    var adEjjeIndexAdBnr = function() {
+        
+                loadGoogleAd('div-gpt-ad-1635316517325-0', 'width: 336px; height: 280px;', $('#ejjeIndexAdBnrId-0-0'));
+            
+                loadGoogleAd('div-gpt-ad-1635316568023-0', 'width: 336px; height: 280px;', $('#ejjeIndexAdBnrId-0-1'));
+            
+                loadGoogleAd('div-gpt-ad-1635316609637-0', 'width: 336px; height: 280px;', $('#ejjeIndexAdBnrId-1-0'));
+            
+                loadGoogleAd('div-gpt-ad-1635316657014-0', 'width: 336px; height: 280px;', $('#ejjeIndexAdBnrId-1-1'));
+            
+                loadGoogleAd('div-gpt-ad-1635316708891-0', 'width: 336px; height: 280px;', $('#ejjeIndexAdBnrId-2-0'));
+            
+                loadGoogleAd('div-gpt-ad-1635316749236-0', 'width: 336px; height: 280px;', $('#ejjeIndexAdBnrId-2-1'));
+            
+    };
+    adEjjeIndexAdBnr();
+
+    
+    var adEjjeIndexRightTopAdBnr = function() {
+        loadGoogleAd('div-gpt-ad-1635315293934-0', '', $('#ejjeRightTopAdId'), false);
+    };
+    adEjjeIndexRightTopAdBnr();
+
+    
+    var adEjjeIndexRightMiddleAdBnr = function() {
+        loadGoogleAd('div-gpt-ad-1635315346842-0', 'height:600px; margin:10px auto; width:300px;', $('#ejjeRightMiddleAdId'), false);
+    };
+    adEjjeIndexRightMiddleAdBnr();
+
+    
+    var adEjjeIndexRightBottomAdBnr = function() {
+        loadGoogleAd('div-gpt-ad-1635315397001-0', 'text-align: center;', $('#ejjeRightBottomAdId'), false);
+    };
+    adEjjeIndexRightBottomAdBnr();
+
+    
+    var adEjjeFooterOverlayAdBnr = function() {
+        loadGoogleAd('div-gpt-ad-1635315447702-0', 'width: 728px; height: 90px;', $('#ejjeFooterOverlayAdId'), false);
+    };
+    adEjjeFooterOverlayAdBnr();
+
+    
+    function loadGoogleAd(googleTagId, styleInfo, element) {
+        var googleDivTag = '';
+        googleDivTag += '<div id="' + googleTagId + '" style="' + styleInfo + '">';
+        googleDivTag += '</' + 'div>\n';
+
+        element.html(googleDivTag);
+        googletag.cmd.push(function () {
+            googletag.display(googleTagId);
+        });
+    }
+})();
+</script>
+<script src="ad検知.js"></script>
+</body>
+</html>
