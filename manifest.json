@@ -4,8 +4,14 @@
     "description": "広告を良い感じに消せるようにする",
     "manifest_version": 3,
     "options_page": "options/index.html",
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["removeAD.js"]
+    }],
     "icons": {
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
+        "128": "images/icon.png"
     }
 }
