@@ -1,4 +1,4 @@
-let ad1 = document.querySelectorAll('div[id*="ad"]');
+let ad1 = document.querySelectorAll('div[id*="ad"]:not([id*="head"])'); // headを含めない
 const CrossImage = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJXYVCbpXdstc30mEWtspHcixWtjN83WZdccPF9QNtF2S9Bykwp5TcMVT8jB4FNEBModDyO_HR5BYIYCvqg_VzEXhbKy7gymQU35n5cpfBr53L_5l9rNqiiz6yR-D1aAOMlpdsvqgXMlI6/s800/mark_batsu.png";
 
 const img = document.createElement('img');
@@ -7,6 +7,7 @@ img.style.position = 'absolute';
 img.style.display = 'none';
 img.style.width = '200px';
 img.style.height = '200px';
+img.style.zIndex = '99999999'; // ✖印の奥行（値が大きいほど手前にくる）
 document.body.appendChild(img);
 
 ad1.forEach(div => {
