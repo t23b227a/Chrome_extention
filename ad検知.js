@@ -6,8 +6,6 @@ const img = document.createElement('img');
 img.src = CrossImage;
 img.style.position = 'absolute';
 img.style.display = 'none';
-img.style.width = '200px';
-img.style.height = '200px';
 document.body.appendChild(img);
 
 ad1.forEach(div => {
@@ -19,6 +17,9 @@ ad1.forEach(div => {
         img.style.left = `${rect.left + window.scrollX}px`;
         img.style.top = `${rect.top + window.scrollY}px`;
         img.style.display = 'block';
+        let img_size = Math.hypot(div.offsetHeight, div.offsetWidth) / 4;
+        img.style.width = `${img_size}px`;
+        img.style.height = `${img_size}px`;
     }, false);
     
     div.addEventListener("mouseout", function() {
