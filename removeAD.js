@@ -1,4 +1,4 @@
-let ad1 =document.querySelectorAll('div[id*="ad"]');
+let ad1 =document.querySelectorAll('div[id*="ad"]', 'div[id*="Ad"', 'div[id*="AD"');
 const CrossImage = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJXYVCbpXdstc30mEWtspHcixWtjN83WZdccPF9QNtF2S9Bykwp5TcMVT8jB4FNEBModDyO_HR5BYIYCvqg_VzEXhbKy7gymQU35n5cpfBr53L_5l9rNqiiz6yR-D1aAOMlpdsvqgXMlI6/s800/mark_batsu.png"
 ad1.forEach(div =>{
     div.classList.add('GoogleADs');
