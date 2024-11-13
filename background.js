@@ -1,4 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
+    console.log('set contextMenus.');
     /* コンテキストメニューを作成 */
     const parent = chrome.contextMenus.create({
         type: "normal",
