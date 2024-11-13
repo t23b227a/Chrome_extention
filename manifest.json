@@ -18,7 +18,7 @@
             "matches": ["<all_urls>"],
             "js": ["removeEl.js"]
         }],
-    "permissions": ["activeTab","scripting","contextMenus"],
+    "permissions": ["activeTab", "tabs", "scripting","contextMenus"],
     "icons": {
         "128": "icons/icon.png"
     }
