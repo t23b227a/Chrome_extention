@@ -18,5 +18,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         } else {
             sendResponse({ value: null });
         }
+        return true; // 非同期の応答を処理するために return true を追加
     }
 });

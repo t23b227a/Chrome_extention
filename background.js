@@ -17,10 +17,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             func: () => {
-                console.log('run func.');
                 // コンテンツスクリプト内の処理
                 chrome.runtime.sendMessage("getClickedEl", (response) => {
                     console.log('send Message.');
+                    console.log('Response received: ', response);
                     // クリックした要素を削除
                     if (response && response.value) {
                         console.log('Element to remove:', response.value);
