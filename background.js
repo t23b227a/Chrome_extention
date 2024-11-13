@@ -14,12 +14,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             func: () => {
-                chrome.tabs.sendMessage(tab.id, "getClickedEl", (response) => {
+                chrome.runtime.sendMessage("getClickedEl", (response) => {
                     if (response && response.value) {
                         console.log('response', response.value);
-                        response.value.remove();
-                    } else {
-                        console.log('削除する要素が見つかりませんでした');
                     }
                 });
             }
