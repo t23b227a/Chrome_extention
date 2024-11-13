@@ -9,6 +9,10 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
+    console.log('test');
+    console.log('info.menuItemId', info.menuItemId);
+    console.log('tabId', tabId);
+
     // if (info.menuItemId === 'remove_element') {
     //     chrome.scripting.executeScript({
     //         target: { tabId: tab.id },
