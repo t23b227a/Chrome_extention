@@ -18,6 +18,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 const removeElement = () => {
     chrome.tabs.sendMessage(tab.id, "getClickedEl", response => {
-        response.value.remove();
+        // response.value.remove();
+        console.log('response', response.value);
     });
 }
