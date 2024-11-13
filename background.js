@@ -9,6 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
+    console.log('test');
     // コンテキストメニューがクリックされた時
     if (info.menuItemId === 'remove_element') {
         console.log('tabId', tab.id);  // タブのIDを確認
