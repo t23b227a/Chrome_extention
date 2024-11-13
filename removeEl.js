@@ -8,7 +8,6 @@ document.addEventListener("contextmenu", event => {
 
 // メッセージを受け取り、保存された要素を返す
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    console.log('test1');
     console.log('receive Message: ', request);  // メッセージを確認
 
     if (request === "getClickedEl") {
