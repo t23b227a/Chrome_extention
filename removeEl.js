@@ -1,3 +1,5 @@
+let clickedEl;
+
 document.addEventListener("contextmenu", event => {
     // イベント発生時の要素を保存
     clickedEl = event.target;
