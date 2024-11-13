@@ -14,7 +14,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             func: () => {
-                chrome.runtime.sendMessage("getClickedEl", (response) => {
+                chrome.tabs.sendMessage(tab.id, "getClickedEl", (response) => {
                     if (response && response.value) {
                         console.log('response', response.value);
                     }
