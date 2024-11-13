@@ -10,22 +10,19 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === 'remove_element') {
-        console.log('tabId', tab.Id);
+        console.log('tabId', tab.id);
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
-            func: removeElement,
-            args: [tab.id],
+            func: () => {
+                chrome.tabs.sendMessage(tab.id, "getClickedEl", (response) => {
+                    if (response && response.value) {
+                        console.log('response', response.value);
+                        response.value.remove();
+                    } else {
+                        console.log('削除する要素が見つかりませんでした');
+                    }
+                });
+            }
         });
     }
 });
-
-const removeElement = (tabId) => {
-    chrome.tabs.sendMessage(tabId, "getClickedEl", (response) => {
-        if (response && response.value) {
-            console.log('response', response.value);
-            response.value.remove();
-        } else {
-            console.log('削除する要素が見つかりませんでした');
-        }
-    });
-}
