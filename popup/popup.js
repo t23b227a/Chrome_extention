@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    var toggleSwitch = document.getElementById('extensionToggle');
+    const toggleSwitch = document.getElementById('extensionToggle');
 
-    // 初期状態をONに設定
+    // 保存された状態を読み込んでトグルスイッチに反映
     chrome.storage.sync.get('extensionEnabled', (data) => {
         if (data.extensionEnabled === undefined) {
             // 初回起動時は拡張機能をONに設定
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // トグルスイッチの状態が変更されたときの処理
     toggleSwitch.addEventListener('change', () => {
-        var isEnabled = this.checked;
+        const isEnabled = toggleSwitch.checked;
         chrome.storage.sync.set({extensionEnabled: isEnabled}, () => {
             console.log('Extension is now ' + (isEnabled ? 'enabled' : 'disabled'));
         });

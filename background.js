@@ -13,21 +13,23 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     // コンテキストメニューがクリックされた時
-    if (info.menuItemId === 'remove_element') {
-        chrome.tabs.sendMessage(tab.id, {action: "removeElement"});
-    }
+    chrome.storage.sync.get('extensionEnabled', (data) => {
+        if (data.extensionEnabled && info.menuItemId === 'remove_element') {
+            chrome.tabs.sendMessage(tab.id, {action: "removeElement"});
+        }
+    });
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "toggleExtension") {
         if (request.enabled) {
-            // 拡張機能が有効になったときの処理
-            console.log("Extension enabled");
+            console.log("Extension", request.enabled);
             // ここに広告を削除するロジックを追加
         } else {
-            // 拡張機能が無効になったときの処理
-            console.log("Extension disabled");
+            console.log("Extension", request.enabled);
             // ここに広告削除を停止するロジックを追加
         }
+        // 状態の変更を確認
+        chrome.storage.sync.set({extensionEnabled: request.enabled});
     }
 });
