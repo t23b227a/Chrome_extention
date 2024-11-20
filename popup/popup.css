@@ -79,7 +79,7 @@ h1 {
     border-radius: 50%;
 }
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #51E373;
 }
 input:checked + .slider:before {
     transform: translateX(26px);
