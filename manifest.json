@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "広告の上にバツ印を置き、広告を消しやすくする",
     "manifest_version": 3,
-    "options_page": "options/index.html",
     "action": {
         "default_popup": "popup/popup.html"
     },
