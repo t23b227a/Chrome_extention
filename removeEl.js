@@ -9,9 +9,11 @@ document.addEventListener("contextmenu", (event) => {
 // メッセージを受け取り、保存された要素を返す
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log('receive Message: ', message);  // メッセージを確認
-
+    
     if (message.action === "removeElement" && clickedEl) {
+        console.log('remove Element:', clickedEl);
         clickedEl.remove();
         clickedEl = null;
+        console.log('removed Element:', clickedEl);
     }
 });
