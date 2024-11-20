@@ -3,10 +3,10 @@
 }
 
 .switch_outer {
-    width: 120px;
-    height: 60px;
+    width: 24px;
+    height: 12px;
     background-color: lightgray;
-    border-radius: 30px;
+    border-radius: 6px;
     position: relative;
     cursor: pointer;
     transition: background-color .2s ease-in-out;
@@ -16,18 +16,18 @@
 }
 
 .toggle_switch {
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     position: absolute;
     background-color: white;
     top: 0;
     bottom: 0;
-    left: 5px;
+    left: 1px;
     margin: auto;
-    box-shadow: 1px 1px 7px #B7B7B7, -1px -1px 4px #CECECE inset;
+    /* box-shadow: 1px 1px 7px #B7B7B7, -1px -1px 4px #CECECE inset; */
     transition: left .3s ease-in-out;
 }
 .toggle_switch.active {
-    left: 65px;
+    left: 13px;
 }
