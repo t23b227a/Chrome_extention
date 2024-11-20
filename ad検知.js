@@ -10,7 +10,7 @@ document.body.appendChild(img);
 
 ad1.forEach(div => {
     div.classList.add('GoogleADs');
-    
+
     div.addEventListener("mouseover", function () {
         named_ad = div;
         const rect = div.getBoundingClientRect();
@@ -22,11 +22,11 @@ ad1.forEach(div => {
         img.style.height = `${img_size}px`;
         img.style.zIndex = '99999999'; // ✖印の奥行（値が大きいほど手前にくる）
     }, false);
-    
+
     div.addEventListener("mouseout", function() {
         img.style.display = 'none';
     }, false);
-    
+
     console.log(div);
 });
 // 画像に対してマウスオーバー時のイベントを追加
