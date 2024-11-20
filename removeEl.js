@@ -10,8 +10,8 @@ document.addEventListener("contextmenu", (event) => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log('receive Message: ', message);  // メッセージを確認
 
-    if (message.action === "removeElement" && targetElement) {
-        targetElement.remove();
-        targetElement = null;
+    if (message.action === "removeElement" && clickedEl) {
+        clickedEl.remove();
+        clickedEl = null;
     }
 });
