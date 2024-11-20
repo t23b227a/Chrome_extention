@@ -1,19 +1,15 @@
-// //スイッチの外枠とスイッチの要素を取得
-// const switchOuter = document.querySelector(".switch_outer");
-// const toggleSwitch = document.querySelector(".toggle_switch");
-
-// //クリックでacitveクラスを追加/削除
-// switchOuter.addEventListener('click', () => {
-//     switchOuter.classList.toggle("active");
-//     toggleSwitch.classList.toggle("active");
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     var toggleSwitch = document.getElementById('extensionToggle');
 
-    // 保存された状態を読み込む
+    // 初期状態をONに設定
     chrome.storage.sync.get('extensionEnabled', function(data) {
-        toggleSwitch.checked = data.extensionEnabled !== false;
+        if (data.extensionEnabled === undefined) {
+            // 初回起動時は拡張機能をONに設定
+            chrome.storage.sync.set({extensionEnabled: true});
+            toggleSwitch.checked = true;
+        } else {
+            toggleSwitch.checked = data.extensionEnabled;
+        }
     });
 
     // トグルスイッチの状態が変更されたときの処理
