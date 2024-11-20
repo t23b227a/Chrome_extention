@@ -21,25 +21,29 @@ ad1.forEach(div => {
     div.classList.add('GoogleADs');
 
     div.addEventListener("mouseover", function () {
-        named_ad = div;
-        const rect = div.getBoundingClientRect();
-        img.style.left = `${rect.left + window.scrollX}px`;
-        img.style.top = `${rect.top + window.scrollY}px`;
-        img.style.display = 'block';
+        chrome.storage.sync.get('extensionEnabled', (data) => {
+            if (data.extensionEnabled) {
+                named_ad = div;
+                const rect = div.getBoundingClientRect();
+                img.style.left = `${rect.left + window.scrollX}px`;
+                img.style.top = `${rect.top + window.scrollY}px`;
+                img.style.display = 'block';
 
-        let img_size = Math.hypot(div.offsetHeight, div.offsetWidth) / 4;
-        img.style.width = `${img_size}px`;
-        img.style.height = `${img_size}px`;
-        img.style.zIndex = '99999999'; // ✖印の奥行（値が大きいほど手前にくる）
+                let img_size = Math.hypot(div.offsetHeight, div.offsetWidth) / 4;
+                img.style.width = `${img_size}px`;
+                img.style.height = `${img_size}px`;
+                img.style.zIndex = '99999999'; // ✖印の奥行（値が大きいほど手前にくる）
 
-        canvas.style.left = `${rect.left + window.scrollX}px`;
-        canvas.style.top = `${rect.top + window.scrollY}px`;
-        canvas.width = img_size;
-        canvas.height = img_size;
-        canvas.style.display = 'block';
+                canvas.style.left = `${rect.left + window.scrollX}px`;
+                canvas.style.top = `${rect.top + window.scrollY}px`;
+                canvas.width = img_size;
+                canvas.height = img_size;
+                canvas.style.display = 'block';
 
-        ctx.fillStyle = "rgba(" + [10, 10, 10, 0.7] + ")";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "rgba(" + [10, 10, 10, 0.7] + ")";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+        });
     }, false);
 
     div.addEventListener("mouseout", function() {
@@ -52,11 +56,7 @@ ad1.forEach(div => {
 
 // 画像に対してマウスオーバー時のイベントを追加
 img.addEventListener("mouseover", function() {
-    chrome.storage.sync.get('extensionEnabled', (data) => {
-        if (data.extensionEnabled){
-            img.style.display = 'block'; // 画像が見えている場合は常に表示
-        }
-    });
+    img.style.display = 'block'; // 画像が見えている場合は常に表示
 }, false);
 
 img.addEventListener("mouseout", function() {
