@@ -1,23 +1,17 @@
 let clickedEl = null;
 
 // 右クリックで選択した要素を保存
-document.addEventListener("contextmenu", event => {
+document.addEventListener("contextmenu", (event) => {
     clickedEl = event.target;
     console.log('save clickedEl: ', clickedEl);  // 右クリックされた要素を保存
 }, true);
 
 // メッセージを受け取り、保存された要素を返す
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    console.log('receive Message: ', request);  // メッセージを確認
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    console.log('receive Message: ', message);  // メッセージを確認
 
-    if (request === "getClickedEl") {
-        // 右クリックした要素があればそのouterHTMLを返す
-        if (clickedEl) {
-            console.log('clickedEl outerHTML: ', clickedEl.outerHTML);
-            sendResponse({ value: clickedEl.outerHTML });
-        } else {
-            sendResponse({ value: null });
-        }
-        return true; // 非同期の応答を処理するために return true を追加
+    if (message.action === "removeElement" && targetElement) {
+        targetElement.remove();
+        targetElement = null;
     }
 });
