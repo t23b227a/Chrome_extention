@@ -5,11 +5,29 @@ chrome.runtime.onInstalled.addListener(() => {
         title: "広告を削除する",
         contexts: ["all"]
     });
+    // ストレージの初期状態を設定
+    chrome.storage.sync.set({extensionEnabled: true}, () => {
+        console.log("Extension is enabled by default");
+    });
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     // コンテキストメニューがクリックされた時
     if (info.menuItemId === 'remove_element') {
         chrome.tabs.sendMessage(tab.id, {action: "removeElement"});
+    }
+});
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === "toggleExtension") {
+        if (request.enabled) {
+            // 拡張機能が有効になったときの処理
+            console.log("Extension enabled");
+            // ここに広告を削除するロジックを追加
+        } else {
+            // 拡張機能が無効になったときの処理
+            console.log("Extension disabled");
+            // ここに広告削除を停止するロジックを追加
+        }
     }
 });
