@@ -72,7 +72,7 @@ function handleAd(div) {
 
         // zIndexの差が±10以内の広告を削除
         allAds.forEach(ad => {
-            const adzIndexStyle = parseInt(window.getComputedStyle(ad).zIndex);
+            const adzIndexStyle = window.getComputedStyle(ad).zIndex;
             const adZIndex = adzIndexStyle === "auto" ? 0 : parseInt(adzIndexStyle);
             console.log('zIndex_ad_c:', adZIndex);
             if (Math.abs(adZIndex - clickedAdZIndex) <= 10) {  // 差が±10以内
