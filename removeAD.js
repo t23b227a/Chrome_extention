@@ -62,9 +62,10 @@ function handleAd(div) {
     img.addEventListener("click", function () {
         console.log('Clicked img.');
         // クリックされた広告のz-indexを取得
-        const clickedAdZIndex = parseInt(window.getComputedStyle(div).zIndex);
+        const zIndexStyle = window.getComputedStyle(div).zIndex;
+        const clickedAdZIndex = zIndexStyle === "auto" ? 0 : parseInt(zIndexStyle);
         
-        console.log('zIndex_Ad_bf:', window.getComputedStyle(div).zIndex);
+        console.log('zIndex_Ad_bf:', zIndexStyle);
         console.log('zIndex_Ad_af:', clickedAdZIndex);
 
         // すべての広告を取得
