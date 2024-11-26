@@ -63,7 +63,9 @@ function handleAd(div) {
         console.log('Clicked img.');
         // クリックされた広告のz-indexを取得
         const clickedAdZIndex = parseInt(window.getComputedStyle(div).zIndex);
-        console.log('zIndex_Ad:', clickedAdZIndex);
+        
+        console.log('zIndex_Ad_bf:', window.getComputedStyle(div).zIndex);
+        console.log('zIndex_Ad_af:', clickedAdZIndex);
 
         // すべての広告を取得
         const allAds = document.querySelectorAll('.GoogleADs');
