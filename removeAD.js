@@ -62,10 +62,9 @@ function handleAd(div) {
     img.addEventListener("click", function () {
         console.log('Clicked img.');
         // クリックされた広告のz-indexを取得
-        const zIndexStyle = window.getComputedStyle(div).zIndex;
-        const clickedAdZIndex = zIndexStyle === "auto" ? 0 : parseInt(zIndexStyle);
-        
-        console.log('zIndex_Ad_bf:', zIndexStyle);
+        const AdzIndexStyle = window.getComputedStyle(div).zIndex;
+        const clickedAdZIndex = AdzIndexStyle === "auto" ? 0 : parseInt(AdzIndexStyle);
+        console.log('zIndex_Ad_bf:', AdzIndexStyle);
         console.log('zIndex_Ad_af:', clickedAdZIndex);
 
         // すべての広告を取得
@@ -73,7 +72,8 @@ function handleAd(div) {
 
         // zIndexの差が±10以内の広告を削除
         allAds.forEach(ad => {
-            const adZIndex = parseInt(window.getComputedStyle(ad).zIndex);
+            const adzIndexStyle = parseInt(window.getComputedStyle(ad).zIndex);
+            const adZIndex = adzIndexStyle === "auto" ? 0 : parseInt(adzIndexStyle);
             console.log('zIndex_ad_c:', adZIndex);
             if (Math.abs(adZIndex - clickedAdZIndex) <= 10) {  // 差が±10以内
                 ad.remove(); // 削除
