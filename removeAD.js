@@ -1,5 +1,5 @@
 const CrossImage = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJXYVCbpXdstc30mEWtspHcixWtjN83WZdccPF9QNtF2S9Bykwp5TcMVT8jB4FNEBModDyO_HR5BYIYCvqg_VzEXhbKy7gymQU35n5cpfBr53L_5l9rNqiiz6yR-D1aAOMlpdsvqgXMlI6/s800/mark_batsu.png";
-let named_ads = [];
+let named_ad;
 
 // 広告ごとに個別の画像を表示する関数
 function handleAd(div) {
@@ -31,7 +31,6 @@ function handleAd(div) {
     div.addEventListener("mouseover", function () {
         chrome.storage.sync.get('extensionEnabled', (data) => {
             if (data.extensionEnabled) {
-                named_ads.push(div); // 複数の広告を配列に追加
                 const rect = div.getBoundingClientRect();  // 広告の位置を取得
                 img.style.left = `${rect.left + window.scrollX}px`; // スクロール位置を考慮
                 img.style.top = `${rect.top + window.scrollY}px`; // スクロール位置を考慮
@@ -45,7 +44,7 @@ function handleAd(div) {
                 canvas.width = img_size;
                 canvas.height = img_size;
                 canvas.style.display = 'block';
-
+        
                 ctx.fillStyle = "rgba(" + [10, 10, 10, 0.7] + ")";
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -58,6 +57,7 @@ function handleAd(div) {
                     }
                 });
             }
+        named_ad = div;
         });
     }, false);
 
@@ -87,13 +87,14 @@ function handleAd(div) {
 
         // zIndexの差が±10以内の広告を削除
         allAds.forEach(ad => {
-            const adZIndex = parseInt(window.getComputedStyle(ad).zIndex);
-            if (Math.abs(adZIndex - clickedAdZIndex) <= 10) {  // 差が±10以内
-                ad.remove(); // 削除
+            if (window.getComputedStyle(ad).zIndex == "auto") {
+                const adZIndex = parseInt(window.getComputedStyle(ad).zIndex);
+                if (Math.abs(adZIndex - clickedAdZIndex) <= 10) {  // 差が±10以内
+                    ad.remove(); // 削除
+                }
             }
         });
-
-        named_ads = []; // 配列をリセット
+        named_ad.remove();
     });
 }
 
