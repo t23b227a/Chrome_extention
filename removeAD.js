@@ -14,6 +14,15 @@ function handleAd(div) {
     img.style.pointerEvents = 'auto'; // クリック可能にする
     document.body.appendChild(img);
 
+    const canvas = document.createElement('canvas');
+    canvas.id = 'myCanvas';
+    canvas.style.position = 'absolute';
+    canvas.style.zIndex = '99999998';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.display = 'none';
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+
     // 広告に画像を関連付ける
     img.ad = div;  // 画像に対応する広告をセット
     div.img = img; // 広告に対応する画像をセット
@@ -29,6 +38,15 @@ function handleAd(div) {
                 let img_size = Math.hypot(div.offsetHeight, div.offsetWidth) / 4;
                 img.style.width = `${img_size}px`;
                 img.style.height = `${img_size}px`;
+
+                canvas.style.left = `${rect.left + window.scrollX}px`;
+                canvas.style.top = `${rect.top + window.scrollY}px`;
+                canvas.width = img_size;
+                canvas.height = img_size;
+                canvas.style.display = 'block';
+        
+                ctx.fillStyle = "rgba(" + [10, 10, 10, 0.7] + ")";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
 
                 // 同じz-indexを持つ画像が重なって表示されている場合
                 // 片方だけ表示する
@@ -46,6 +64,7 @@ function handleAd(div) {
     // 広告からマウスが離れたときの処理
     div.addEventListener("mouseout", function () {
         img.style.display = 'none'; // 画像を非表示
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
     }, false);
 
     // 画像にマウスオーバー時の処理
