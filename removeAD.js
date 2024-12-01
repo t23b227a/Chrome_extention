@@ -3,8 +3,6 @@ let named_ad;
 
 // 広告ごとに個別の画像を表示する関数
 function handleAd(div) {
-    div.classList.add('GoogleADs');
-
     // 各広告ごとに画像を作成
     const img = document.createElement('img');
     img.src = CrossImage;
@@ -13,7 +11,6 @@ function handleAd(div) {
     img.style.zIndex = '1000000000'; // 画像を最前面に表示
     img.style.pointerEvents = 'auto'; // クリック可能にする
     document.body.appendChild(img);
-
     const canvas = document.createElement('canvas');
     canvas.id = 'myCanvas';
     canvas.style.position = 'absolute';
@@ -21,9 +18,8 @@ function handleAd(div) {
     canvas.style.pointerEvents = 'none';
     canvas.style.display = 'none';
     document.body.appendChild(canvas);
-    const ctx = canvas.getContext('2d');
+    let ctx = canvas.getContext('2d');
 
-    // 広告に画像を関連付ける
     img.ad = div;  // 画像に対応する広告をセット
     div.img = img; // 広告に対応する画像をセット
 
@@ -38,7 +34,6 @@ function handleAd(div) {
                 let img_size = Math.hypot(div.offsetHeight, div.offsetWidth) / 4;
                 img.style.width = `${img_size}px`;
                 img.style.height = `${img_size}px`;
-
                 canvas.style.left = `${rect.left + window.scrollX}px`;
                 canvas.style.top = `${rect.top + window.scrollY}px`;
                 canvas.width = img_size;
@@ -66,6 +61,7 @@ function handleAd(div) {
         img.style.display = 'none'; // 画像を非表示
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }, false);
+    
 
     // 画像にマウスオーバー時の処理
     img.addEventListener("mouseover", function () {
@@ -80,7 +76,7 @@ function handleAd(div) {
     // 画像がクリックされたときの処理
     img.addEventListener("click", function () {
         // クリックされた広告のz-indexを取得
-        const clickedAdZIndex = parseInt(window.getComputedStyle(div).zIndex);
+        let clickedAdZIndex = parseInt(window.getComputedStyle(div).zIndex);
 
         // すべての広告を取得
         const allAds = document.querySelectorAll('.GoogleADs');
@@ -99,7 +95,9 @@ function handleAd(div) {
 }
 
 // 既存の広告を処理
-const ad1 = document.querySelectorAll('div[id*="ad"]:not([id*="head"]):not([id*="graduate"])'); // headを含めない
+const ad1 = document.querySelectorAll(
+    'div[id*="ad"]:not([id*="head"]):not([id*="graduate"]):not([id*="shadow"]):not([id*="loading"])'
+); // フィルタ
 ad1.forEach(handleAd);
 
 // MutationObserverで新しい広告の追加を監視
